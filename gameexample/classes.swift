@@ -7,12 +7,14 @@
 
 import Foundation
 
-class Room{
+class Room: Identifiable{
     var connectedRooms:[Room]
     var roompic:String
-    init(connectedRooms:[Room], roompic:String){
+    var roomType:String
+    init(connectedRooms:[Room], roompic:String,roomType:String){
         self.connectedRooms = connectedRooms
         self.roompic = roompic
+        self.roomType = roomType
     }
 }
 
@@ -53,10 +55,10 @@ class Building{
 }
 
 
-var yourcell = Room(connectedRooms: [],roompic: "room")
-var yoursisterscell = Room(connectedRooms: [yourcell], roompic: "room1")
-var exit = Room(connectedRooms: [yourcell,yoursisterscell], roompic: "room2")
-var someRoomWithGuardsInIt = Room(connectedRooms: [exit,yourcell,yoursisterscell], roompic: "backgroundthingy")
+var yourcell = Room(connectedRooms: [],roompic: "room", roomType: "right")
+var yoursisterscell = Room(connectedRooms: [yourcell], roompic: "room1", roomType: "up")
+var exit = Room(connectedRooms: [yourcell,yoursisterscell], roompic: "room2", roomType: "down")
+var someRoomWithGuardsInIt = Room(connectedRooms: [exit,yourcell,yoursisterscell], roompic: "backgroundthingy", roomType: "left")
 
 //var prison = Building(room1:yourcell , room2: yoursisterscell,room3: exit, room4:someRoomWithGuardsInIt)
 var prison = Building(rooms: [yourcell,yoursisterscell,exit, someRoomWithGuardsInIt])
