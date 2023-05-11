@@ -14,10 +14,20 @@ struct test: View {
     @State private var boolThingy2 = false
     @State private var boolforor = false
     @State private var scale = 1.0
+    @State private var recthing = false
     var body: some View {
         ZStack{
+            
+                
             Image("\(imgurlor)")
-            Image("\(imgurlthing)").scaleEffect(scale)
+            if boolforor == false {
+                Image("\(imgurlthing)")
+            }
+           
+                //.scaleEffect(scale)
+//            if recthing{
+//                Rectangle()
+//            }
             HStack{
                 Button("forward"){
                     //withAnimation(.easeIn(duration: //1.2)){
@@ -35,6 +45,11 @@ struct test: View {
                     withAnimation(.easeIn(duration: 1.0).delay(0.1)){
                         scale += 1
                     }
+                    withAnimation(.easeIn(duration: 1.0).delay(0.1)){
+                        recthing.toggle()
+                    }
+                    
+                   
                     
                     print(rooms)
                     if rooms == 2{

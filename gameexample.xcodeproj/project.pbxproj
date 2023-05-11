@@ -15,6 +15,8 @@
 		E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E32A05895D0056FBDB /* turningright.swift */; };
 		E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E52A058A9E0056FBDB /* forward.swift */; };
 		E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E72A0A2AFC0056FBDB /* test.swift */; };
+		E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* classes.swift */; };
+		E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6EB2A0C3A510056FBDB /* test2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E7D1D6E32A05895D0056FBDB /* turningright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turningright.swift; sourceTree = "<group>"; };
 		E7D1D6E52A058A9E0056FBDB /* forward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forward.swift; sourceTree = "<group>"; };
 		E7D1D6E72A0A2AFC0056FBDB /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		E7D1D6E92A0AE1EF0056FBDB /* classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classes.swift; sourceTree = "<group>"; };
+		E7D1D6EB2A0C3A510056FBDB /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				E7D1D6E32A05895D0056FBDB /* turningright.swift */,
 				E7D1D6E52A058A9E0056FBDB /* forward.swift */,
 				E7D1D6E72A0A2AFC0056FBDB /* test.swift */,
+				E7D1D6E92A0AE1EF0056FBDB /* classes.swift */,
+				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 				E7D1D6D72A043EE60056FBDB /* Preview Content */,
 			);
@@ -149,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
+				E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,
 				E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */,
 				E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */,

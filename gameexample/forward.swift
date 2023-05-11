@@ -15,7 +15,7 @@ struct forward: View {
     @State var boolThing = false
     @State var dialog = false
     @State private var heightOTT: CGFloat = 0.0
-     @State private var widthOfTheThing: CGFloat = 1.0
+    @State private var widthOfTheThing: CGFloat = 1.0
     
     
     

@@ -17,6 +17,7 @@ struct gameexampleApp: App {
            // turningright()
             //forward()
             //test()
+            test2()
         }
     }
 }
