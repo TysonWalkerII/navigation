@@ -1,14 +1,14 @@
+////
+////  test2.swift
+////  gameexample
+////
+////  Created by Tyson Laroyce Walker II on 5/10/23.
+////
+////PURPOSE OF THIS FILE
+////HOPEFULLY I CAN GET THE FUNCTIONALITY FOR THE NAVIGATION TO WORK WITH THE VARIABLES I MADE INSTEAD OF JUST IF STATEMENTS
 //
-//  test2.swift
-//  gameexample
+//import SwiftUI
 //
-//  Created by Tyson Laroyce Walker II on 5/10/23.
-//
-//PURPOSE OF THIS FILE
-//HOPEFULLY I CAN GET THE FUNCTIONALITY FOR THE NAVIGATION TO WORK WITH THE VARIABLES I MADE INSTEAD OF JUST IF STATEMENTS
-
-import SwiftUI
-
 //struct test2: View {
 //
 //    var currentRoom = prison.rooms[3]
@@ -64,7 +64,7 @@ import SwiftUI
 //        }
 //    }
 //}
-
+//
 //struct test2_Previews: PreviewProvider {
 //    static var previews: some View {
 //        test2()

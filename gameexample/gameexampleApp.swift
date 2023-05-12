@@ -17,7 +17,7 @@ struct gameexampleApp: App {
            // turningright()
             //forward()
             //test()
-            Text("")
+            RoomNavigation()
         }
     }
 }

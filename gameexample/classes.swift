@@ -16,8 +16,11 @@ struct Room: Identifiable {
     public var leftRoom: String?
     public var rightRoom: String?
     
-    var rooms: [String: String?] {
-        
+    var connectedRooms: [Direction: String?] {
+        [.forward: forwardRoom,
+         .backward: backwardRoom,
+         .left: leftRoom,
+         .right: rightRoom]
     }
     
     

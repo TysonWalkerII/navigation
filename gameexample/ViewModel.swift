@@ -13,5 +13,6 @@ class ViewModel: ObservableObject {
     
     init() {
         self.currentRoom = .yourCell
+//        print(currentRoom)
     }
 }
