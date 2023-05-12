@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+let vmir = ViewModel()
 struct Room: Identifiable {
     
     let id = UUID()
@@ -34,10 +34,10 @@ struct Room: Identifiable {
         self.roompic = roompic
     }
     //TODO: add roomPics.
-    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "")
-    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "")
-    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "")
-    static let guardsRoom = Room(backwardRoom: "exit", roompic: "")
+    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room")
+    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1")
+    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2")
+    static let guardsRoom = Room(backwardRoom: "exit", roompic: "poolrooms")
     static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom]
     
 //    func goForward() -> Room? {
@@ -52,7 +52,12 @@ struct Room: Identifiable {
         switch direction {
             
         case .forward:
-            guard let room = self.forwardRoom else {
+            
+           // vmir.currentRoom =
+           // print(rooms)
+            
+            guard let room = self.forwardRoom
+            else {
                 return nil
             }
             return Self.rooms[room]

@@ -28,24 +28,81 @@ struct RoomNavigation: View {
                 switch direction {
                 case .forward:
                     // TODO: make these buttons. the buttons actions should change what room we're in
-                    Image("ddr arrow")
-                        .resizable()
-                        .frame(width:60,height:60)
+                    Button{
+                        guard let nameOfRoom = vm.currentRoom.forwardRoom else{
+                            return
+                        }
+                        vm.currentRoom.move(.forward)
+                       print( Room.rooms["\(nameOfRoom)"])
+                        print(nameOfRoom)
+                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "")
+                        
+                    }label:{
+                        Image("ddr arrow")
+                            .resizable()
+                            .frame(width:60,height:60)
+                    }
+                    
                 case .backward:
-                    Image("ddr arrow")
-                        .resizable()
-                        .frame(width:60,height:60)
-                        .rotationEffect(.degrees(180))
+                    Button{
+                        guard let nameOfRoom = vm.currentRoom.backwardRoom else{
+                            return
+                        }
+                        
+                        vm.currentRoom.move(.backward)
+                        
+                       print( Room.rooms["\(nameOfRoom)"])
+                        print(nameOfRoom)
+                        
+                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "")
+                        
+                        
+                       
+                    }label:{
+                        Image("ddr arrow")
+                            .resizable()
+                            .frame(width:60,height:60)
+                            .rotationEffect(.degrees(180))
+                    }
                 case .left:
-                    Image("ddr arrow")
-                        .resizable()
-                        .frame(width:60,height:60)
-                        .rotationEffect(.degrees(-90))
+                    Button{
+                        guard let nameOfRoom = vm.currentRoom.leftRoom else{
+                            return
+                        }
+                        vm.currentRoom.move(.left)
+                       print( Room.rooms["\(nameOfRoom)"])
+                        print(nameOfRoom)
+                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "")
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }label:{
+                        Image("ddr arrow")
+                            .resizable()
+                            .frame(width:60,height:60)
+                            .rotationEffect(.degrees(-90))
+                    }
                 case .right:
-                    Image("ddr arrow")
-                        .resizable()
-                        .frame(width:60,height:60)
-                        .rotationEffect(.degrees(90))
+                    Button{
+                        guard let nameOfRoom = vm.currentRoom.rightRoom else{
+                            return
+                        }
+                        vm.currentRoom.move(.right)
+                       print( Room.rooms["\(nameOfRoom)"])
+                        print(nameOfRoom)
+                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "")
+                        print("button was just tapped")
+                    }label:{
+                        Image("ddr arrow")
+                            .resizable()
+                            .frame(width:60,height:60)
+                            .rotationEffect(.degrees(90))
+                    }
                 }
             }
             else {
