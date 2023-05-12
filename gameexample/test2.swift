@@ -10,10 +10,10 @@
 import SwiftUI
 
 //struct test2: View {
-//    
+//
 //    var currentRoom = prison.rooms[3]
-//    
-//   
+//
+//
 //    var body: some View {
 //        ZStack{
 //            Image("\(currentRoom.roompic)")
@@ -33,34 +33,34 @@ import SwiftUI
 //                        if thing.roomType == "down"{
 //                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(180))
 //                        }
-//                        
-////                        switch thing{
-////                        case "up":
-////                            Image("ddr arrow").resizable().frame(width:60,height:60)
-////
-////                        case "right":
-////                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(90))
-////                        case "left":
-////                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(-90))
-////                        case "down":
-////                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(180))
-////                        default:
-////                            Image("")
-////                        }
-//                        
+//
+//                        switch thing{
+//                        case "up":
+//                            Image("ddr arrow").resizable().frame(width:60,height:60)
+//
+//                        case "right":
+//                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(90))
+//                        case "left":
+//                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(-90))
+//                        case "down":
+//                            Image("ddr arrow").resizable().frame(width:60,height:60).rotationEffect(.degrees(180))
+//                        default:
+//                            Image("")
+//                        }
+//
 //                    }
-//                    
-//                    
-//                    
-//                        
-//                    
-//                    
-//                   
-//                    
-//                    
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //                }
 //            }
-//            
+//
 //        }
 //    }
 //}

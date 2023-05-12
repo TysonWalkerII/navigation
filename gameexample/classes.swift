@@ -16,6 +16,10 @@ struct Room: Identifiable {
     public var leftRoom: String?
     public var rightRoom: String?
     
+    var rooms: [String: String?] {
+        
+    }
+    
     
     
     var roompic:String
