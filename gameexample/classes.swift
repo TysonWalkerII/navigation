@@ -7,16 +7,66 @@
 
 import Foundation
 
-class Room: Identifiable{
-    var connectedRooms:[Room]
+struct Room: Identifiable {
+    
+    let id = UUID()
+    
+    public var forwardRoom: String?
+    public var backwardRoom: String?
+    public var leftRoom: String?
+    public var rightRoom: String?
+    
+    
+    
     var roompic:String
-    var roomType:String
-    init(connectedRooms:[Room], roompic:String,roomType:String){
-        self.connectedRooms = connectedRooms
+    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String) {
+        self.forwardRoom = forwardRoom
+        self.backwardRoom = backwardRoom
+        self.leftRoom = leftRoom
+        self.rightRoom = rightRoom
         self.roompic = roompic
-        self.roomType = roomType
+    }
+    
+    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "")
+    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "")
+    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "")
+    static let guardsRoom = Room(backwardRoom: "exit", roompic: "")
+    static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom]
+    
+    func goForward() -> Room? {
+        guard let forwardRoom = self.forwardRoom else {
+            return nil
+        }
+        return Self.rooms[forwardRoom]
+    }
+    
+    func move(_ direction: Direction) -> Room? {
+        switch direction {
+            
+        case .forward:
+            guard let room = self.forwardRoom else {
+                return nil
+            }
+            return Self.rooms[room]
+        case .backward:
+            guard let room = self.backwardRoom else {
+                return nil
+            }
+            return Self.rooms[room]
+        case .left:
+            guard let room = self.leftRoom else {
+                return nil
+            }
+            return Self.rooms[room]
+        case .right:
+            guard let room = self.rightRoom else {
+                return nil
+            }
+            return Self.rooms[room]
+        }
     }
 }
+
 
 //class Building{
 //    var room1 = Room(connectedRooms: [], roompic: "")
@@ -55,13 +105,13 @@ class Building{
 }
 
 
-var yourcell = Room(connectedRooms: [],roompic: "room", roomType: "right")
-var yoursisterscell = Room(connectedRooms: [yourcell], roompic: "room1", roomType: "up")
-var exit = Room(connectedRooms: [yourcell,yoursisterscell], roompic: "room2", roomType: "down")
-var someRoomWithGuardsInIt = Room(connectedRooms: [exit,yourcell,yoursisterscell], roompic: "backgroundthingy", roomType: "left")
+//var yourcell = Room(connectedRooms: [],roompic: "room", roomType: "right")
+//var yoursisterscell = Room(connectedRooms: [yourcell], roompic: "room1", roomType: "up")
+//var exit = Room(connectedRooms: [ ,yoursisterscell], roompic: "room2", roomType: "down")
+//var someRoomWithGuardsInIt = Room(connectedRooms: [exit,yourcell,yoursisterscell], roompic: "backgroundthingy", roomType: "left")
 
 //var prison = Building(room1:yourcell , room2: yoursisterscell,room3: exit, room4:someRoomWithGuardsInIt)
-var prison = Building(rooms: [yourcell,yoursisterscell,exit, someRoomWithGuardsInIt])
+//var prison = Building(rooms: [yourcell,yoursisterscell,exit, someRoomWithGuardsInIt])
 
 class Singer{
     var name:String
