@@ -33,20 +33,21 @@ struct Room: Identifiable {
         self.rightRoom = rightRoom
         self.roompic = roompic
     }
-    
+    //TODO: add roomPics.
     static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "")
     static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "")
     static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "")
     static let guardsRoom = Room(backwardRoom: "exit", roompic: "")
     static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom]
     
-    func goForward() -> Room? {
-        guard let forwardRoom = self.forwardRoom else {
-            return nil
-        }
-        return Self.rooms[forwardRoom]
-    }
+//    func goForward() -> Room? {
+//        guard let forwardRoom = self.forwardRoom else {
+//            return nil
+//        }
+//        return Self.rooms[forwardRoom]
+//    }
     
+    //TODO: call this function when you tap a button to update the @published value in the view model
     func move(_ direction: Direction) -> Room? {
         switch direction {
             

@@ -27,6 +27,7 @@ struct RoomNavigation: View {
             if let roomName = optionalRoomName {
                 switch direction {
                 case .forward:
+                    // TODO: make these buttons. the buttons actions should change what room we're in
                     Image("ddr arrow")
                         .resizable()
                         .frame(width:60,height:60)
