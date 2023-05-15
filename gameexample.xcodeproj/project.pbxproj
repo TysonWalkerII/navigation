@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17E35BA52A12B262009E0B51 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E35BA42A12B262009E0B51 /* Player.swift */; };
+		17E35BAA2A12BE6B009E0B51 /* Guards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E35BA92A12BE6B009E0B51 /* Guards.swift */; };
 		74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEA2A0EB938000BD90B /* Direction.swift */; };
 		74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */; };
 		74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		17E35BA42A12B262009E0B51 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		17E35BA92A12BE6B009E0B51 /* Guards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guards.swift; sourceTree = "<group>"; };
 		74C14DEA2A0EB938000BD90B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNavigation.swift; sourceTree = "<group>"; };
 		74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				74C14DEA2A0EB938000BD90B /* Direction.swift */,
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
 				17E35BA42A12B262009E0B51 /* Player.swift */,
+				17E35BA92A12BE6B009E0B51 /* Guards.swift */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 				E7D1D6D72A043EE60056FBDB /* Preview Content */,
 			);
@@ -170,6 +173,7 @@
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
 				E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,
+				17E35BAA2A12BE6B009E0B51 /* Guards.swift in Sources */,
 				74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */,
 				17E35BA52A12B262009E0B51 /* Player.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,

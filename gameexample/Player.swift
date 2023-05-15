@@ -6,7 +6,6 @@
 //
 
 struct player {
-    var health = 20
     var str = 10
     var cha = 10
     var int = 10
