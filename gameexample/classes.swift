@@ -7,10 +7,11 @@
 
 import Foundation
 let vmir = ViewModel()
-struct Room: Identifiable {
+struct Room: Identifiable, Codable {
     
-    let id = UUID()
+    let id: UUID
     
+    public let name: String
     public var forwardRoom: String?
     public var backwardRoom: String?
     public var leftRoom: String?
@@ -28,7 +29,8 @@ struct Room: Identifiable {
     
     
     var roompic:String
-    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item]) {
+    init(name: String, forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item]) {
+        self.id = UUID()
         self.forwardRoom = forwardRoom
         self.backwardRoom = backwardRoom
         self.leftRoom = leftRoom
@@ -36,51 +38,35 @@ struct Room: Identifiable {
         self.roompic = roompic
         self.personInRoom = personInRoom
         self.itemsInRoom = itemsInRoom
+        self.name = name
     }
-    //TODO: add roomPics.  DONE
-    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [])
-    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1",personInRoom: Person(portrait: "",dialog: [""], inventory: []), itemsInRoom: [])
-    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "you recognize me?", "Thank you I've never ran into a fan before"], inventory: []), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")])
-    static let guardsRoom = Room(backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [ ])
-    static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom]
+    static let yourCell = Room(name: "yourCell", forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [])
+    static let yourSistersCell = Room(name: "yourSistersCell", forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1",personInRoom: Person(portrait: "",dialog: [""], inventory: []), itemsInRoom: [])
+    static let exit = Room(name: "exit", forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "you recognize me?", "Thank you I've never ran into a fan before"], inventory: []), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")])
+    static let guardsRoom = Room(name: "guardsRoom", backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [ ])
+    static let rooms: [Room] = [yourCell, yourSistersCell, exit, guardsRoom]
     
+    //    func saveRooms(_ rooms: [String:Room])
+
     
-//    func goForward() -> Room? {
-//        guard let forwardRoom = self.forwardRoom else {
-//            return nil
-//        }
-//        return Self.rooms[forwardRoom]
-//    }
-    
-    //TODO: call this function when you tap a button to update the @published value in the view model
     func move(_ direction: Direction) -> Room? {
+        let roomName = fetchRoomName(for: direction, in: self)
+        guard let room = Self.rooms.filter({ $0.name == roomName }).first else {
+            return nil
+        }
+        return room
+    }
+    
+    private func fetchRoomName(for direction: Direction, in room: Room) -> String? {
         switch direction {
-            
         case .forward:
-            
-           // vmir.currentRoom =
-           // print(rooms)
-            
-            guard let room = self.forwardRoom
-            else {
-                return nil
-            }
-            return Self.rooms[room]
+            return room.forwardRoom
         case .backward:
-            guard let room = self.backwardRoom else {
-                return nil
-            }
-            return Self.rooms[room]
+            return room.backwardRoom
         case .left:
-            guard let room = self.leftRoom else {
-                return nil
-            }
-            return Self.rooms[room]
+            return room.leftRoom
         case .right:
-            guard let room = self.rightRoom else {
-                return nil
-            }
-            return Self.rooms[room]
+            return room.rightRoom
         }
     }
 }
@@ -109,17 +95,17 @@ struct Room: Identifiable {
 
 class Building{
     var rooms: [Room] = []
-
-
+    
+    
     init(rooms:[Room]){
         self.rooms = rooms
-
+        
     }
-
-
-
-
-
+    
+    
+    
+    
+    
 }
 
 
@@ -145,7 +131,7 @@ class Building{
 
 //Next part will be giving every room their boolean to show whether we passed the room or not. An arrow will be shown and the boolean will determine whether the arrow is normal or the opposite of what it would be if we passed the room
 
-class Person: Identifiable{
+class Person: Identifiable, Codable {
     let id = UUID()
     public var hp: Int?
     public var portrait: String?
@@ -164,21 +150,18 @@ class Person: Identifiable{
     
 }
 
-class Item :Identifiable{
-    let id = UUID()
+class Item :Identifiable, Codable {
+    let id: UUID
     public var itemImg:String?
     public var itemName:String?
     public var itemDescription:String?
-     
+    
     init(itemImg: String? = nil, itemName: String? = nil, itemDescription: String? = nil) {
+        self.id = UUID()
         self.itemImg = itemImg
         self.itemName = itemName
         self.itemDescription = itemDescription
     }
-    
-   
-    
-    
 }
 
 

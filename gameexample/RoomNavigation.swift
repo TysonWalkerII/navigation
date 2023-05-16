@@ -39,12 +39,12 @@ struct RoomNavigation: View {
                     //Items in room
                     ScrollView(.horizontal){
                         HStack{
-                            ForEach(vm.currentRoom.itemsInRoom.indices, id: \.self){ thing in
+                            ForEach(vm.currentRoom.itemsInRoom.indices, id: \.self){ index in
                                 Button{
-                                    vm.player.inventory.append(vm.currentRoom.itemsInRoom[thing])
-                                    vm.currentRoom.itemsInRoom.remove(at: thing)
+                                    vm.player.inventory.append(vm.currentRoom.itemsInRoom[index])
+                                    vm.currentRoom.itemsInRoom.remove(at: index)
                                 }label:{
-                                    Image(vm.currentRoom.itemsInRoom[thing].itemImg ?? "")
+                                    Image(vm.currentRoom.itemsInRoom[index].itemImg ?? "")
                                         .resizable().frame(width:70,height:70)
                                 }
                             }
@@ -70,30 +70,33 @@ struct RoomNavigation: View {
     }
     
     func ddrArrows(for direction: Direction) -> some View {
-        ZStack {
-            let optionalRoomName = vm.currentRoom.connectedRooms[direction]!
+        
+        //        vm.currentRoom = vm.currentRoom.move(direction)
+        //        //ROOM PICTURE
+        //        crImage = vm.currentRoom.roompic
+        //        //CHARA PIC
+        //        charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
+        //        //CHARA DIALOG
+        
+        let optionalRoomName = vm.currentRoom.connectedRooms[direction]!
+        return ZStack {
+            
             if let roomName = optionalRoomName {
+                
+                
                 switch direction {
                 case .forward:
-                    // TODO: make these buttons. the buttons actions should change what room we're in
                     Button{
-                        guard let nameOfRoom = vm.currentRoom.forwardRoom else{
-                            return
-                        }
-                        vm.currentRoom.move(.forward)
-                        print(Room.rooms["\(nameOfRoom)"])
-                        print(nameOfRoom)
-                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "", itemsInRoom: [])
-                        //ROOM PICTURE
-                        crImage = vm.currentRoom.roompic
-                        //CHARA PIC
-                        charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
-                        //CHARA DIALOG
+                        //                        guard let nameOfRoom = vm.currentRoom.forwardRoom else{
+                        //                            return
+                        //                        }
+                        vm.currentRoom = vm.currentRoom.move(direction)!
+                        
                         if vm.currentRoom.personInRoom?.portrait != ""{
                             charaText = charaDialog[0]
                             charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
-                            print("\(charaDialog)")
-                            print("\(vm.currentRoom.itemsInRoom)")
+//                            print("\(charaDialog)")
+//                            print("\(vm.currentRoom.itemsInRoom)")
                         }else{
                             
                             charaImage = ""
@@ -108,19 +111,11 @@ struct RoomNavigation: View {
                     }
                 case .backward:
                     Button{
-                        guard let nameOfRoom = vm.currentRoom.backwardRoom else{
-                            return
-                        }
-                        vm.currentRoom.move(.backward)
-                        print( Room.rooms["\(nameOfRoom)"])
-                        print(nameOfRoom)
-                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "", itemsInRoom: [])
+                        //                        guard let nameOfRoom = vm.currentRoom.backwardRoom else{
+                        //                            return
+                        //                        }
                         
-                        //ROOM PIC
-                        crImage = vm.currentRoom.roompic
-                        //CHARA PIC
-                        charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
-                        //CHARA DIALOG
+                        
                         if vm.currentRoom.personInRoom?.portrait != ""{
                             charaText = charaDialog[0]
                             charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
@@ -132,6 +127,8 @@ struct RoomNavigation: View {
                             charaDialog = [""]
                             charaText = ""
                         }
+                        vm.currentRoom = vm.currentRoom.move(direction)!
+
                     }label:{
                         Image("ddr arrow")
                             .resizable()
@@ -140,29 +137,22 @@ struct RoomNavigation: View {
                     }
                 case .left:
                     Button{
-                        guard let nameOfRoom = vm.currentRoom.leftRoom else{
-                            return
-                        }
-                        vm.currentRoom.move(.left)
-                        print( Room.rooms["\(nameOfRoom)"])
-                        print(nameOfRoom)
-                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "", itemsInRoom: [])
-                        //ROOM PIC
-                        crImage = vm.currentRoom.roompic
-                        //CHARA PIC
-                        charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
+                        //                        guard let nameOfRoom = vm.currentRoom.leftRoom else{
+                        //                            return
+                        //                        }
                         
-                        //CHARA DIALOG
                         if vm.currentRoom.personInRoom?.portrait != ""{
                             charaText = charaDialog[0]
                             charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
-                            print("\(charaDialog)")
+//                            print("\(charaDialog)")
                         } else {
                             charaImage = ""
                             charaDialogCount  = 1
                             charaDialog = [""]
                             charaText = ""
                         }
+                        vm.currentRoom = vm.currentRoom.move(direction)!
+
                     } label: {
                         Image("ddr arrow")
                             .resizable()
@@ -171,29 +161,22 @@ struct RoomNavigation: View {
                     }
                 case .right:
                     Button {
-                        guard let nameOfRoom = vm.currentRoom.rightRoom else{
-                            return
-                        }
-                        vm.currentRoom.move(.right)
-                        print( Room.rooms["\(nameOfRoom)"])
-                        print(nameOfRoom)
-                        vm.currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "", itemsInRoom: [])
-                        print("button was just tapped")
-                        //ROOM PIC
-                        crImage = vm.currentRoom.roompic
-                        //CHARA PIC
-                        charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
-                        //CHARA DIALOG
+                        //                        guard let nameOfRoom = vm.currentRoom.rightRoom else{
+                        //                            return
+                        //                        }
+                        
                         if charaImage != "" {
                             charaText = charaDialog[0]
                             charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
-                            print("\(charaDialog)")
+//                            print("\(charaDialog)")
                         } else {
                             charaImage = ""
                             charaDialogCount  = 1
                             charaDialog = [""]
                             charaText = ""
                         }
+                        vm.currentRoom = vm.currentRoom.move(direction)!
+
                     } label: {
                         Image("ddr arrow")
                             .resizable()
@@ -201,9 +184,6 @@ struct RoomNavigation: View {
                             .rotationEffect(.degrees(90))
                     }
                 }
-            }
-            else {
-                EmptyView()
             }
         }
     }
