@@ -9,10 +9,11 @@ import Foundation
 
 class ViewModel: ObservableObject {
     @Published var currentRoom: Room
-    
+    @Published var player:Person
     
     init() {
         self.currentRoom = .yourCell
+        self.player = .player
 //        print(currentRoom)
     }
 }
