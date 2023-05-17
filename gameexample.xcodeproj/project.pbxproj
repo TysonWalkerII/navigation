@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74BD9CF02A1552FD0087EDB7 /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CEF2A1552FD0087EDB7 /* Trash.swift */; };
+		74BD9CF22A1553240087EDB7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CF12A1553240087EDB7 /* Person.swift */; };
+		74BD9CF42A1553350087EDB7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CF32A1553350087EDB7 /* Item.swift */; };
 		74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEA2A0EB938000BD90B /* Direction.swift */; };
 		74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */; };
 		74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */; };
@@ -19,11 +22,14 @@
 		E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E32A05895D0056FBDB /* turningright.swift */; };
 		E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E52A058A9E0056FBDB /* forward.swift */; };
 		E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E72A0A2AFC0056FBDB /* test.swift */; };
-		E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* classes.swift */; };
+		E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* Room.swift */; };
 		E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6EB2A0C3A510056FBDB /* test2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74BD9CEF2A1552FD0087EDB7 /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trash.swift; path = "../../../../../Library/CloudStorage/GoogleDrive-ctripathy0@gmail.com/.Trash/navigation/gameexample/Trash.swift"; sourceTree = "<group>"; };
+		74BD9CF12A1553240087EDB7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		74BD9CF32A1553350087EDB7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		74C14DEA2A0EB938000BD90B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNavigation.swift; sourceTree = "<group>"; };
 		74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -37,7 +43,7 @@
 		E7D1D6E32A05895D0056FBDB /* turningright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turningright.swift; sourceTree = "<group>"; };
 		E7D1D6E52A058A9E0056FBDB /* forward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forward.swift; sourceTree = "<group>"; };
 		E7D1D6E72A0A2AFC0056FBDB /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		E7D1D6E92A0AE1EF0056FBDB /* classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classes.swift; sourceTree = "<group>"; };
+		E7D1D6E92A0AE1EF0056FBDB /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		E7D1D6EB2A0C3A510056FBDB /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +58,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74BD9CEC2A1552C00087EDB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7D1D6E92A0AE1EF0056FBDB /* Room.swift */,
+				74BD9CF12A1553240087EDB7 /* Person.swift */,
+				74BD9CEF2A1552FD0087EDB7 /* Trash.swift */,
+				74BD9CF32A1553350087EDB7 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74BD9CED2A1552C80087EDB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74BD9CEE2A1552CC0087EDB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
+				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E7D1D6C52A043EE40056FBDB = {
 			isa = PBXGroup;
 			children = (
@@ -71,17 +105,16 @@
 		E7D1D6D02A043EE50056FBDB /* gameexample */ = {
 			isa = PBXGroup;
 			children = (
+				74BD9CED2A1552C80087EDB7 /* ViewModel */,
+				74BD9CEE2A1552CC0087EDB7 /* View */,
+				74BD9CEC2A1552C00087EDB7 /* Model */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
-				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
 				E7D1D6E32A05895D0056FBDB /* turningright.swift */,
 				E7D1D6E52A058A9E0056FBDB /* forward.swift */,
 				E7D1D6E72A0A2AFC0056FBDB /* test.swift */,
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
 				74C14DEA2A0EB938000BD90B /* Direction.swift */,
-				E7D1D6E92A0AE1EF0056FBDB /* classes.swift */,
-				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
-				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
 				E7175B192A1281830056A94D /* Inventory.swift */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 				E7D1D6D72A043EE60056FBDB /* Preview Content */,
@@ -169,12 +202,15 @@
 			files = (
 				E7175B1A2A1281830056A94D /* Inventory.swift in Sources */,
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
-				E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */,
+				E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,
+				74BD9CF22A1553240087EDB7 /* Person.swift in Sources */,
 				74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,
 				E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */,
+				74BD9CF02A1552FD0087EDB7 /* Trash.swift in Sources */,
 				E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */,
+				74BD9CF42A1553350087EDB7 /* Item.swift in Sources */,
 				E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */,
 				E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */,
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
