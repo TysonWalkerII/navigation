@@ -8,7 +8,12 @@
 import Foundation
 
 class ViewModel: ObservableObject {
-    @Published var currentRoom: Room
+    @Published var currentRoom: Room {
+        didSet {
+            print(currentRoom.name)
+            print(currentRoom.connectedRooms)
+        }
+    }
     @Published var player:Person
     
     init() {

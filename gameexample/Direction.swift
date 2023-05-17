@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Direction: String, Equatable, Comparable {
+enum Direction: String, Equatable, Comparable, Codable {
     static func < (lhs: Direction, rhs: Direction) -> Bool {
         lhs.rawValue == rhs.rawValue
     }
