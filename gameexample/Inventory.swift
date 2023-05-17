@@ -37,7 +37,7 @@ struct Inventory: View {
                                 ForEach(vm.player.inventory.indices, id: \.self){ thing in
                                     Button{
                                         if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
-                                            vm.trash.itemsInTrash.append(vm.player.inventory[thing])
+                                            vm.trash.items.append(vm.player.inventory[thing])
                                             vm.player.inventory.remove(at: thing)
                                             vm.currentRoom.locked.toggle()
                                         }
