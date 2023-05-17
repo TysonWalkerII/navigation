@@ -51,7 +51,7 @@ struct test: View {
                     
                    
                     
-                    print(rooms)
+//                    print(rooms)
                     if rooms == 2{
                         boolThingy2 = true
                         

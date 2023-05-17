@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74BD9CF02A1552FD0087EDB7 /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CEF2A1552FD0087EDB7 /* Trash.swift */; };
+		749222E72A1562BA00ADCAA3 /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749222E62A1562BA00ADCAA3 /* Trash.swift */; };
+		749222E92A15645600ADCAA3 /* DDRArrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749222E82A15645600ADCAA3 /* DDRArrows.swift */; };
 		74BD9CF22A1553240087EDB7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CF12A1553240087EDB7 /* Person.swift */; };
 		74BD9CF42A1553350087EDB7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD9CF32A1553350087EDB7 /* Item.swift */; };
 		74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEA2A0EB938000BD90B /* Direction.swift */; };
@@ -27,7 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74BD9CEF2A1552FD0087EDB7 /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trash.swift; path = "../../../../../Library/CloudStorage/GoogleDrive-ctripathy0@gmail.com/.Trash/navigation/gameexample/Trash.swift"; sourceTree = "<group>"; };
+		749222E62A1562BA00ADCAA3 /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
+		749222E82A15645600ADCAA3 /* DDRArrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDRArrows.swift; sourceTree = "<group>"; };
 		74BD9CF12A1553240087EDB7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		74BD9CF32A1553350087EDB7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		74C14DEA2A0EB938000BD90B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 			children = (
 				E7D1D6E92A0AE1EF0056FBDB /* Room.swift */,
 				74BD9CF12A1553240087EDB7 /* Person.swift */,
-				74BD9CEF2A1552FD0087EDB7 /* Trash.swift */,
+				749222E62A1562BA00ADCAA3 /* Trash.swift */,
 				74BD9CF32A1553350087EDB7 /* Item.swift */,
 			);
 			path = Model;
@@ -82,6 +84,7 @@
 			children = (
 				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
+				749222E82A15645600ADCAA3 /* DDRArrows.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,13 +205,14 @@
 			files = (
 				E7175B1A2A1281830056A94D /* Inventory.swift in Sources */,
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
+				749222E92A15645600ADCAA3 /* DDRArrows.swift in Sources */,
 				E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,
 				74BD9CF22A1553240087EDB7 /* Person.swift in Sources */,
 				74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,
 				E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */,
-				74BD9CF02A1552FD0087EDB7 /* Trash.swift in Sources */,
+				749222E72A1562BA00ADCAA3 /* Trash.swift in Sources */,
 				E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */,
 				74BD9CF42A1553350087EDB7 /* Item.swift in Sources */,
 				E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */,
