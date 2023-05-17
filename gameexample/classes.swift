@@ -10,13 +10,15 @@ let vmir = ViewModel()
 struct Room: Identifiable {
     
     let id = UUID()
-    
+    public var locked:Bool
     public var forwardRoom: String?
     public var backwardRoom: String?
     public var leftRoom: String?
     public var rightRoom: String?
     var personInRoom: Person?
     var itemsInRoom: [Item]
+    var key:Item?
+    var explored:Bool?
     
     var connectedRooms: [Direction: String?] {
         [.forward: forwardRoom,
@@ -28,7 +30,7 @@ struct Room: Identifiable {
     
     
     var roompic:String
-    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item]) {
+    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item],locked:Bool,key:Item?,explored:Bool?) {
         self.forwardRoom = forwardRoom
         self.backwardRoom = backwardRoom
         self.leftRoom = leftRoom
@@ -36,13 +38,18 @@ struct Room: Identifiable {
         self.roompic = roompic
         self.personInRoom = personInRoom
         self.itemsInRoom = itemsInRoom
+        self.locked = locked
+        self.key = key
+        self.explored = explored
     }
     //TODO: add roomPics.  DONE
-    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [])
-    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1",personInRoom: Person(portrait: "",dialog: [""], inventory: []), itemsInRoom: [])
-    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "you recognize me?", "Thank you I've never ran into a fan before"], inventory: []), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")])
-    static let guardsRoom = Room(backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: []), itemsInRoom: [ ])
-    static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom]
+    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: []), itemsInRoom: [], locked: false, key: nil, explored: false)
+    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1",personInRoom: Person(portrait: "",dialog: [""], inventory: [], dialog2: []), itemsInRoom: [], locked: false, key: nil, explored: false)
+    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "good luck getting out", "I gave up a while ago ngl", "now I just jump on the bed all day", "beware...", "I heard theres some mysterious dude in the next room", "people never really return from there"], inventory: [], dialog2: ["????????","omg its u again","whoa omg wats it like in there"]), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")], locked: false, key: nil, explored: false)
+   
+    static let guardsRoom = Room(forwardRoom:"dangerZone",backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: []), itemsInRoom: [ ], locked: false, key: nil, explored: false)
+    static let dangerZone = Room(backwardRoom: "guardsRoom", roompic: "dangerzone", itemsInRoom: [], locked: true, key: Item(itemImg: "column", itemName: "column"), explored: false)
+    static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom, "dangerZone":dangerZone]
     
     
 //    func goForward() -> Room? {
@@ -83,6 +90,11 @@ struct Room: Identifiable {
             return Self.rooms[room]
         }
     }
+}
+
+struct Trash: Identifiable {
+    let id = UUID()
+    var itemsInTrash: [Item]
 }
 
 
@@ -150,16 +162,18 @@ class Person: Identifiable{
     public var hp: Int?
     public var portrait: String?
     public var dialog:[String]
+    public var dialog2:[String]?
     public var inventory:[Item]
     
-    init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item]){
+    init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item], dialog2:[String]){
         self.hp = hp
         self.portrait = portrait
         self.dialog = dialog
         self.inventory = inventory
+        self.dialog2 = dialog2
     }
     static let playersItems = [Item(itemImg: "column",itemName: "column")]
-    static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems)
+    static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems, dialog2: [])
     
     
 }
