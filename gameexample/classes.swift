@@ -57,16 +57,16 @@ struct Room: Identifiable, Codable {
         return room
     }
     
-    private func fetchRoomName(for direction: Direction, in room: Room) -> String? {
+    private func fetchRoomName(for direction: Direction, in room: Room) -> String {
         switch direction {
         case .forward:
-            return room.forwardRoom
+            return room.forwardRoom ?? room.name
         case .backward:
-            return room.backwardRoom
+            return room.backwardRoom ?? room.name
         case .left:
-            return room.leftRoom
+            return room.leftRoom ?? room.name
         case .right:
-            return room.rightRoom
+            return room.rightRoom ?? room.name
         }
     }
 }
@@ -132,13 +132,14 @@ class Building{
 //Next part will be giving every room their boolean to show whether we passed the room or not. An arrow will be shown and the boolean will determine whether the arrow is normal or the opposite of what it would be if we passed the room
 
 class Person: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     public var hp: Int?
     public var portrait: String?
     public var dialog:[String]
     public var inventory:[Item]
     
     init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item]){
+        self.id = UUID()
         self.hp = hp
         self.portrait = portrait
         self.dialog = dialog

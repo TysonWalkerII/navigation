@@ -81,7 +81,7 @@ struct RoomNavigation: View {
         let optionalRoomName = vm.currentRoom.connectedRooms[direction]!
         return ZStack {
             
-            if let roomName = optionalRoomName {
+            if optionalRoomName != nil {
                 
                 
                 switch direction {
@@ -127,6 +127,7 @@ struct RoomNavigation: View {
                             charaDialog = [""]
                             charaText = ""
                         }
+                        print(vm.currentRoom)
                         vm.currentRoom = vm.currentRoom.move(direction)!
 
                     }label:{
