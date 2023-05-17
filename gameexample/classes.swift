@@ -166,13 +166,10 @@ class Item :Identifiable, Codable {
 }
 
 
-//extension Item: Equatable{
-//    static func == (lhs: Item, rhs: Item) -> Bool {
-//        let someVariable = lhs.id == rhs.id && lhs.itemImg == rhs.itemImg &&
-//        lhs.itemName == rhs.itemName &&
-//        lhs.itemDescription == rhs.itemDescription
-//        return someVariable
-//    }
-//}
+extension Item: Equatable{
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        lhs.id == rhs.id
+    }
+}
 
 
