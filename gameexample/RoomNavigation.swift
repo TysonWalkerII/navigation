@@ -206,15 +206,17 @@ struct RoomNavigation: View {
                         charaImage = vm.currentRoom.personInRoom?.portrait ?? ""
                         //CHARA DIALOG
                         if vm.currentRoom.personInRoom?.portrait != ""{
-                            charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
-                            charaText = charaDialog[0]
-                            if vm.currentRoom.explored ?? false{
-                                charaDialog = vm.currentRoom.personInRoom?.dialog2 ?? [""]
-                            }else{
+                            if vm.currentRoom.explored == false{
+                                
                                 charaDialog = vm.currentRoom.personInRoom?.dialog ?? [""]
+                            }else{
+                                charaDialog = vm.currentRoom.personInRoom?.dialog2 ?? [""]
                             }
+                            charaText = charaDialog[0]
+                           
                             print("\(charaDialog)")
                             print("\(vm.currentRoom.itemsInRoom)")
+                            print(vm.currentRoom.explored)
                         }else{
                             
                             charaImage = ""
