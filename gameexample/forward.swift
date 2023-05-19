@@ -25,7 +25,7 @@ struct forward: View {
     
     var body: some View {
         ZStack{
-            Image("room1")
+            Image("background")
                 .scaleEffect(scale)
               
                 

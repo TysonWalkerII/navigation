@@ -11,6 +11,16 @@
 		74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */; };
 		74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */; };
 		E7175B1A2A1281830056A94D /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7175B192A1281830056A94D /* Inventory.swift */; };
+		E7175B402A17D09A0056A94D /* ChakraPetch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */; };
+		E7175B412A17D09E0056A94D /* ChakraPetch-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */; };
+		E7175B422A17D0A30056A94D /* ChakraPetch-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3A2A17D0110056A94D /* ChakraPetch-Light.ttf */; };
+		E7175B432A17D0A30056A94D /* ChakraPetch-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3C2A17D0110056A94D /* ChakraPetch-Italic.ttf */; };
+		E7175B442A17D0A30056A94D /* ChakraPetch-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3B2A17D0110056A94D /* ChakraPetch-SemiBoldItalic.ttf */; };
+		E7175B452A17D0A30056A94D /* ChakraPetch-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */; };
+		E7175B462A17D0A30056A94D /* ChakraPetch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B382A17D0110056A94D /* ChakraPetch-Medium.ttf */; };
+		E7175B472A17D0A30056A94D /* ChakraPetch-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */; };
+		E7175B482A17D0A30056A94D /* ChakraPetch-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B392A17D0110056A94D /* ChakraPetch-LightItalic.ttf */; };
+		E7175B492A17D0A30056A94D /* ChakraPetch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */; };
 		E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */; };
 		E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D32A043EE50056FBDB /* ContentView.swift */; };
 		E7D1D6D62A043EE60056FBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D1D6D52A043EE60056FBDB /* Assets.xcassets */; };
@@ -28,6 +38,17 @@
 		74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNavigation.swift; sourceTree = "<group>"; };
 		74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E7175B192A1281830056A94D /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
+		E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
+		E7175B382A17D0110056A94D /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
+		E7175B392A17D0110056A94D /* ChakraPetch-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-LightItalic.ttf"; sourceTree = "<group>"; };
+		E7175B3A2A17D0110056A94D /* ChakraPetch-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Light.ttf"; sourceTree = "<group>"; };
+		E7175B3B2A17D0110056A94D /* ChakraPetch-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E7175B3C2A17D0110056A94D /* ChakraPetch-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Italic.ttf"; sourceTree = "<group>"; };
+		E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Bold.ttf"; sourceTree = "<group>"; };
+		E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E7175B4A2A17D15B0056A94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7D1D6CE2A043EE50056FBDB /* gameexample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameexample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameexampleApp.swift; sourceTree = "<group>"; };
 		E7D1D6D32A043EE50056FBDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +73,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7175B352A17CFC20056A94D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */,
+				E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */,
+				E7175B3C2A17D0110056A94D /* ChakraPetch-Italic.ttf */,
+				E7175B3A2A17D0110056A94D /* ChakraPetch-Light.ttf */,
+				E7175B392A17D0110056A94D /* ChakraPetch-LightItalic.ttf */,
+				E7175B382A17D0110056A94D /* ChakraPetch-Medium.ttf */,
+				E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */,
+				E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */,
+				E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */,
+				E7175B3B2A17D0110056A94D /* ChakraPetch-SemiBoldItalic.ttf */,
+				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E7D1D6C52A043EE40056FBDB = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +110,7 @@
 		E7D1D6D02A043EE50056FBDB /* gameexample */ = {
 			isa = PBXGroup;
 			children = (
+				E7175B4A2A17D15B0056A94D /* Info.plist */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
 				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
@@ -83,7 +123,7 @@
 				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
 				E7175B192A1281830056A94D /* Inventory.swift */,
-				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
+				E7175B352A17CFC20056A94D /* Fonts */,
 				E7D1D6D72A043EE60056FBDB /* Preview Content */,
 			);
 			path = gameexample;
@@ -155,8 +195,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7175B412A17D09E0056A94D /* ChakraPetch-BoldItalic.ttf in Resources */,
 				E7D1D6D92A043EE60056FBDB /* Preview Assets.xcassets in Resources */,
+				E7175B472A17D0A30056A94D /* ChakraPetch-Regular.ttf in Resources */,
+				E7175B452A17D0A30056A94D /* ChakraPetch-MediumItalic.ttf in Resources */,
 				E7D1D6D62A043EE60056FBDB /* Assets.xcassets in Resources */,
+				E7175B432A17D0A30056A94D /* ChakraPetch-Italic.ttf in Resources */,
+				E7175B462A17D0A30056A94D /* ChakraPetch-Medium.ttf in Resources */,
+				E7175B402A17D09A0056A94D /* ChakraPetch-Bold.ttf in Resources */,
+				E7175B482A17D0A30056A94D /* ChakraPetch-LightItalic.ttf in Resources */,
+				E7175B442A17D0A30056A94D /* ChakraPetch-SemiBoldItalic.ttf in Resources */,
+				E7175B492A17D0A30056A94D /* ChakraPetch-SemiBold.ttf in Resources */,
+				E7175B422A17D0A30056A94D /* ChakraPetch-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +288,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -292,6 +343,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -310,6 +362,7 @@
 				DEVELOPMENT_TEAM = 4SW86B8349;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gameexample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +392,7 @@
 				DEVELOPMENT_TEAM = 4SW86B8349;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gameexample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

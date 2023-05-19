@@ -17,7 +17,7 @@ struct ContentView: View {
    
     var body: some View {
         ZStack{
-            Image("room1").offset(x:CGFloat(positionOfBackground))
+            Image("background").offset(x:CGFloat(positionOfBackground))
            
 
             if boolThing {

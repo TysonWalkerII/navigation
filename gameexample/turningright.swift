@@ -16,7 +16,10 @@ struct turningright: View {
     @State var dialog = false
     var body: some View {
         ZStack{
-            Image("room1").offset(x:CGFloat(positionOfBackground))
+            Section{
+                Image("bgtest4").offset(x:CGFloat(positionOfBackground))
+
+            }.scaledToFit()
            
 
             if boolThing == true{

@@ -19,6 +19,8 @@ struct Room: Identifiable {
     var itemsInRoom: [Item]
     var key:Item?
     var explored:Bool?
+    var dialog:String?
+    var choices:[Choice]
     
     var connectedRooms: [Direction: String?] {
         [.forward: forwardRoom,
@@ -30,7 +32,7 @@ struct Room: Identifiable {
     
     
     var roompic:String
-    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item],locked:Bool,key:Item?,explored:Bool?) {
+    init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item],locked:Bool,key:Item?,explored:Bool?,dialog:String?,choices:[Choice]) {
         self.forwardRoom = forwardRoom
         self.backwardRoom = backwardRoom
         self.leftRoom = leftRoom
@@ -41,23 +43,19 @@ struct Room: Identifiable {
         self.locked = locked
         self.key = key
         self.explored = explored
+        self.dialog = dialog
+        self.choices = choices
     }
+    
+    //maybe there can be a struct for choices and each player can have choices that work with the dialog every choice can have the property that is how it effects the person and stuff
     //TODO: add roomPics.  DONE
-    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: []), itemsInRoom: [], locked: false, key: nil, explored: false)
-    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "room1",personInRoom: Person(portrait: "",dialog: [""], inventory: [], dialog2: []), itemsInRoom: [], locked: false, key: nil, explored: false)
-    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "good luck getting out", "I gave up a while ago ngl", "now I just jump on the bed all day", "beware...", "I heard theres some mysterious dude in the next room", "people never really return from there"], inventory: [], dialog2: ["????????","omg its u again","whoa omg wats it like in there"]), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")], locked: false, key: nil, explored: false)
+    static let yourCell = Room(forwardRoom: "exit", rightRoom: "yourSistersCell", roompic: "room", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: [], choice: nil, nameOfPerson: nil), itemsInRoom: [], locked: false, key: nil, explored: false, dialog: nil, choices: [])
+    static let yourSistersCell = Room(forwardRoom: "exit", leftRoom: "yourCell", roompic: "background",personInRoom: Person(portrait: "",dialog: [""], inventory: [], dialog2: [], choice: nil, nameOfPerson: nil), itemsInRoom: [], locked: false, key: nil, explored: false, dialog: "You see a cup of coffee on the floor, do you:", choices: [Choice(description: "Dring the random substance of a cup you just found on the floor of some random room", effect: "health - 1", image: "coffeecup"), Choice(description: "Leave it there", effect: "nothing", image: "skipuno")])
+    static let exit = Room(forwardRoom: "guardsRoom", backwardRoom: "yourCell", roompic: "room2",personInRoom: Person(portrait: "botaningame",dialog: ["Hello","Are you lost too?", "good luck getting out", "I gave up a while ago ngl", "now I just jump on the bed all day", "beware...", "I heard theres some mysterious dude in the next room", "people never really return from there"], inventory: [], dialog2: ["????????","omg its u again","thats a lot of items"], choice: "highfive", nameOfPerson: "Botan Shishiro"), itemsInRoom: [Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column"),Item(itemImg: "column",itemName: "column")], locked: false, key: nil, explored: false, dialog: nil, choices: [])
    
-    static let guardsRoom = Room(forwardRoom:"dangerZone",backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: []), itemsInRoom: [ ], locked: false, key: nil, explored: false)
-    static let dangerZone = Room(backwardRoom: "guardsRoom", roompic: "dangerzone", itemsInRoom: [], locked: true, key: Item(itemImg: "column", itemName: "column"), explored: false)
+    static let guardsRoom = Room(forwardRoom:"dangerZone",backwardRoom: "exit", roompic: "poolrooms", personInRoom: Person(portrait: "", dialog: [""], inventory: [], dialog2: [], choice: nil, nameOfPerson: nil), itemsInRoom: [ ], locked: false, key: nil, explored: false, dialog: nil, choices: [])
+    static let dangerZone = Room(backwardRoom: "guardsRoom", roompic: "dangerzone", itemsInRoom: [], locked: true, key: Item(itemImg: "column", itemName: "column"), explored: false, dialog: nil, choices: [])
     static let rooms: [String:Room] = ["yourCell":yourCell, "yourSistersCell": yourSistersCell, "exit":exit, "guardsRoom":guardsRoom, "dangerZone":dangerZone]
-    
-    
-//    func goForward() -> Room? {
-//        guard let forwardRoom = self.forwardRoom else {
-//            return nil
-//        }
-//        return Self.rooms[forwardRoom]
-//    }
     
     //TODO: call this function when you tap a button to update the @published value in the view model
     func move(_ direction: Direction) -> Room? {
@@ -92,32 +90,22 @@ struct Room: Identifiable {
     }
 }
 
+
+
+struct Choice:Identifiable{
+    let id = UUID()
+    var description:String
+    var effect:String
+    var image:String
+}
+
 struct Trash: Identifiable {
     let id = UUID()
     var itemsInTrash: [Item]
 }
 
 
-//class Building{
-//    var room1 = Room(connectedRooms: [], roompic: "")
-//    var room2 = Room(connectedRooms: [],roompic: "")
-//    var room3 = Room(connectedRooms: [], roompic: "")
-//    var room4 = Room(connectedRooms: [], roompic: "")
-//
-//
-//    init(room1:Room,room2:Room, room3:Room, room4:Room){
-//        self.room1 = room1
-//        self.room2 = room2
-//        self.room3 = room3
-//        self.room4 = room4
-//
-//    }
-//
-//
-//
-//
-//
-//}
+
 
 class Building{
     var rooms: [Room] = []
@@ -135,27 +123,7 @@ class Building{
 }
 
 
-//var yourcell = Room(connectedRooms: [],roompic: "room", roomType: "right")
-//var yoursisterscell = Room(connectedRooms: [yourcell], roompic: "room1", roomType: "up")
-//var exit = Room(connectedRooms: [ ,yoursisterscell], roompic: "room2", roomType: "down")
-//var someRoomWithGuardsInIt = Room(connectedRooms: [exit,yourcell,yoursisterscell], roompic: "backgroundthingy", roomType: "left")
 
-//var prison = Building(room1:yourcell , room2: yoursisterscell,room3: exit, room4:someRoomWithGuardsInIt)
-//var prison = Building(rooms: [yourcell,yoursisterscell,exit, someRoomWithGuardsInIt])
-
-//class Singer{
-//    var name:String
-//    var age:Int
-//    init(name:String, age:Int){
-//        self.name = name
-//        self.age = age
-//    }
-//}
-
-//var randomSinger = Singer(name: "taylor swift", age: 3)
-
-
-//Next part will be giving every room their boolean to show whether we passed the room or not. An arrow will be shown and the boolean will determine whether the arrow is normal or the opposite of what it would be if we passed the room
 
 class Person: Identifiable{
     let id = UUID()
@@ -164,16 +132,19 @@ class Person: Identifiable{
     public var dialog:[String]
     public var dialog2:[String]?
     public var inventory:[Item]
+    public var choice:String?
+    public var nameOfPerson:String?
     
-    init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item], dialog2:[String]){
+    init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item], dialog2:[String], choice:String?, nameOfPerson:String?){
         self.hp = hp
         self.portrait = portrait
         self.dialog = dialog
         self.inventory = inventory
         self.dialog2 = dialog2
+        self.nameOfPerson = nameOfPerson
     }
     static let playersItems = [Item(itemImg: "column",itemName: "column")]
-    static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems, dialog2: [])
+    static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems, dialog2: [], choice: nil, nameOfPerson: nil)
     
     
 }
