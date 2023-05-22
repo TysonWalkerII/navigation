@@ -24,6 +24,9 @@ class ViewModel: ObservableObject {
         currentRoom = room
     }
     
+    func randomRoom() {
+        
+    }
     
     init() {
         rooms = Room.createRooms()
