@@ -17,10 +17,9 @@ struct RoomNavigation: View {
     @State public var showInventory = false
     @State var roomDialog = ""
     @State var showItemDescription = true
-    let data = (1...100).map { "Item \($0)" }
     let columns = [
         GridItem(.adaptive(minimum: 80))]
-    @State  var tappedOnItem = Item()
+    @State var selectedItem = Item()
     func changeDialogue(){
         if charaDialogCount == charaDialog.count - 1 || charaDialogCount == charaDialog.count{
             charaDialogCount = 0
@@ -56,7 +55,7 @@ struct RoomNavigation: View {
                 }}.onTapGesture {
                     changeDialogue()}
             if showInventory {
-                InventoryView(columns: columns, tappedOnItem: $tappedOnItem, vm: vm)
+                InventoryView(columns: columns, tappedOnItem: $selectedItem, vm: vm)
             }
             
             if vm.choices.count != 0 && !roomDialog.isEmpty {

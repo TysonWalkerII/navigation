@@ -50,7 +50,6 @@
 		E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Bold.ttf"; sourceTree = "<group>"; };
 		E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-MediumItalic.ttf"; sourceTree = "<group>"; };
-		E7175B4A2A17D15B0056A94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E78B947A2A2670A4006E5313 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		E78B947C2A2677AE006E5313 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		E7D1D6CE2A043EE50056FBDB /* gameexample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameexample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +112,6 @@
 		E7D1D6D02A043EE50056FBDB /* gameexample */ = {
 			isa = PBXGroup;
 			children = (
-				E7175B4A2A17D15B0056A94D /* Info.plist */,
 				E78B947C2A2677AE006E5313 /* ProgressBarView.swift */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
@@ -370,7 +368,7 @@
 				DEVELOPMENT_TEAM = 4SW86B8349;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gameexample/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -400,7 +398,7 @@
 				DEVELOPMENT_TEAM = 4SW86B8349;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gameexample/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
