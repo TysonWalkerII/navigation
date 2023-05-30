@@ -21,6 +21,8 @@
 		E7175B472A17D0A30056A94D /* ChakraPetch-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */; };
 		E7175B482A17D0A30056A94D /* ChakraPetch-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B392A17D0110056A94D /* ChakraPetch-LightItalic.ttf */; };
 		E7175B492A17D0A30056A94D /* ChakraPetch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */; };
+		E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B947A2A2670A4006E5313 /* InventoryView.swift */; };
+		E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B947C2A2677AE006E5313 /* ProgressBarView.swift */; };
 		E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */; };
 		E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D32A043EE50056FBDB /* ContentView.swift */; };
 		E7D1D6D62A043EE60056FBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D1D6D52A043EE60056FBDB /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E7175B4A2A17D15B0056A94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E78B947A2A2670A4006E5313 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		E78B947C2A2677AE006E5313 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		E7D1D6CE2A043EE50056FBDB /* gameexample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameexample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameexampleApp.swift; sourceTree = "<group>"; };
 		E7D1D6D32A043EE50056FBDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 				E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */,
 				E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */,
 				E7175B3B2A17D0110056A94D /* ChakraPetch-SemiBoldItalic.ttf */,
-				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -111,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E7175B4A2A17D15B0056A94D /* Info.plist */,
+				E78B947C2A2677AE006E5313 /* ProgressBarView.swift */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
 				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
@@ -122,7 +126,9 @@
 				E7D1D6E92A0AE1EF0056FBDB /* classes.swift */,
 				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
+				E78B947A2A2670A4006E5313 /* InventoryView.swift */,
 				E7175B192A1281830056A94D /* Inventory.swift */,
+				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 				E7175B352A17CFC20056A94D /* Fonts */,
 				E7D1D6D72A043EE60056FBDB /* Preview Content */,
 			);
@@ -228,7 +234,9 @@
 				E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */,
 				E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */,
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
+				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
 				74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */,
+				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

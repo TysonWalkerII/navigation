@@ -18,6 +18,7 @@ struct gameexampleApp: App {
             //forward()
             //test()
             RoomNavigation()
+           // ProgressBarView()
         }
     }
 }
