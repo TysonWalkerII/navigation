@@ -6,9 +6,8 @@
 //
 
 import Foundation
-let vmir = ViewModel()
+
 struct Room: Identifiable {
-    
     let id = UUID()
     public var locked:Bool
     public var forwardRoom: String?
@@ -29,9 +28,8 @@ struct Room: Identifiable {
          .right: rightRoom]
     }
     
-    
-    
     var roompic:String
+    
     init(forwardRoom: String? = nil, backwardRoom: String? = nil, leftRoom: String? = nil, rightRoom: String? = nil, roompic: String, personInRoom:Person? = nil, itemsInRoom:[Item],locked:Bool,key:Item?,explored:Bool?,dialog:String?,choices:[Choice]) {
         self.forwardRoom = forwardRoom
         self.backwardRoom = backwardRoom
@@ -92,93 +90,3 @@ struct Room: Identifiable {
         }
     }
 }
-
-
-
-struct Choice:Identifiable{
-    let id = UUID()
-    var description:String
-    var effect:String
-    var image:String
-}
-
-struct Trash: Identifiable {
-    let id = UUID()
-    var itemsInTrash: [Item]
-}
-
-
-
-
-class Building{
-    var rooms: [Room] = []
-
-
-    init(rooms:[Room]){
-        self.rooms = rooms
-
-    }
-
-
-
-
-
-}
-
-
-
-
-class Person: Identifiable{
-    let id = UUID()
-    public var hp: Int?
-    public var portrait: String?
-    public var dialog:[String]
-    public var dialog2:[String]?
-    public var inventory:[Item]
-    public var choice:String?
-    public var nameOfPerson:String?
-    
-    init(hp:Int? = nil, portrait:String?, dialog:[String],inventory:[Item], dialog2:[String], choice:String?, nameOfPerson:String?){
-        self.hp = hp
-        self.portrait = portrait
-        self.dialog = dialog
-        self.inventory = inventory
-        self.dialog2 = dialog2
-        self.nameOfPerson = nameOfPerson
-    }
-    static let playersItems = [Item(itemImg: "column",itemName: "column",itemDescription: "This beautiful column is used to open up doors and stuff thats about it"),Item(itemImg: "bucket",itemName: "Bucket of Cheese Ballz",itemDescription: "So delicious...just eat the whole thing")]
-    static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems, dialog2: [], choice: nil, nameOfPerson: nil)
-    
-    
-}
-
-class Item :Identifiable{
-    
-    
-    let id = UUID()
-    public var itemImg:String?
-    public var itemName:String?
-    public var itemDescription:String?
-     
-    init(itemImg: String? = nil, itemName: String? = nil, itemDescription: String? = nil) {
-        self.itemImg = itemImg
-        self.itemName = itemName
-        self.itemDescription = itemDescription
-    }
-    
-   
-    
-    
-}
-
-
-//extension Item: Equatable{
-//    static func == (lhs: Item, rhs: Item) -> Bool {
-//        let someVariable = lhs.id == rhs.id && lhs.itemImg == rhs.itemImg &&
-//        lhs.itemName == rhs.itemName &&
-//        lhs.itemDescription == rhs.itemDescription
-//        return someVariable
-//    }
-//}
-
-
