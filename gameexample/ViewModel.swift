@@ -13,6 +13,8 @@ class ViewModel: ObservableObject {
     @Published var trash: Trash
     @Published var progress: Double = 0.0
     @Published var choices:[Choice] = []
+    @Published var selectedItem = Item()
+
     
     private let randomNumbersInAnArray = [1.0,14.0,7.0]
 
