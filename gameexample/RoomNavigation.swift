@@ -19,6 +19,7 @@ struct RoomNavigation: View {
     @State var showItemDescription = true
     let columns = [
         GridItem(.adaptive(minimum: 80))]
+    
     func changeDialogue(){
         if charaDialogCount == charaDialog.count - 1 || charaDialogCount == charaDialog.count{
             charaDialogCount = 0

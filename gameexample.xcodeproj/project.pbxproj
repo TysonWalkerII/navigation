@@ -10,6 +10,10 @@
 		74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEA2A0EB938000BD90B /* Direction.swift */; };
 		74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */; };
 		74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */; };
+		74CD79522A267B3200BCE74E /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79512A267B3200BCE74E /* Choice.swift */; };
+		74CD79542A267B4100BCE74E /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79532A267B4100BCE74E /* Trash.swift */; };
+		74CD79562A267B5C00BCE74E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79552A267B5C00BCE74E /* Person.swift */; };
+		74CD79582A267B7100BCE74E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79572A267B7100BCE74E /* Item.swift */; };
 		E7175B1A2A1281830056A94D /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7175B192A1281830056A94D /* Inventory.swift */; };
 		E7175B402A17D09A0056A94D /* ChakraPetch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */; };
 		E7175B412A17D09E0056A94D /* ChakraPetch-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */; };
@@ -31,7 +35,7 @@
 		E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E32A05895D0056FBDB /* turningright.swift */; };
 		E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E52A058A9E0056FBDB /* forward.swift */; };
 		E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E72A0A2AFC0056FBDB /* test.swift */; };
-		E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* classes.swift */; };
+		E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* Room.swift */; };
 		E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6EB2A0C3A510056FBDB /* test2.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +43,10 @@
 		74C14DEA2A0EB938000BD90B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNavigation.swift; sourceTree = "<group>"; };
 		74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		74CD79512A267B3200BCE74E /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		74CD79532A267B4100BCE74E /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
+		74CD79552A267B5C00BCE74E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		74CD79572A267B7100BCE74E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E7175B192A1281830056A94D /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
 		E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -61,7 +69,7 @@
 		E7D1D6E32A05895D0056FBDB /* turningright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turningright.swift; sourceTree = "<group>"; };
 		E7D1D6E52A058A9E0056FBDB /* forward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forward.swift; sourceTree = "<group>"; };
 		E7D1D6E72A0A2AFC0056FBDB /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		E7D1D6E92A0AE1EF0056FBDB /* classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classes.swift; sourceTree = "<group>"; };
+		E7D1D6E92A0AE1EF0056FBDB /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		E7D1D6EB2A0C3A510056FBDB /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74CD79502A267B2200BCE74E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7D1D6E92A0AE1EF0056FBDB /* Room.swift */,
+				74CD79572A267B7100BCE74E /* Item.swift */,
+				74CD79552A267B5C00BCE74E /* Person.swift */,
+				74CD79532A267B4100BCE74E /* Trash.swift */,
+				74CD79512A267B3200BCE74E /* Choice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E7175B352A17CFC20056A94D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +141,7 @@
 				E7D1D6E72A0A2AFC0056FBDB /* test.swift */,
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
 				74C14DEA2A0EB938000BD90B /* Direction.swift */,
-				E7D1D6E92A0AE1EF0056FBDB /* classes.swift */,
+				74CD79502A267B2200BCE74E /* Models */,
 				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
 				E78B947A2A2670A4006E5313 /* InventoryView.swift */,
@@ -223,16 +243,20 @@
 			files = (
 				E7175B1A2A1281830056A94D /* Inventory.swift in Sources */,
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
-				E7D1D6EA2A0AE1EF0056FBDB /* classes.swift in Sources */,
+				E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,
 				74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,
+				74CD79522A267B3200BCE74E /* Choice.swift in Sources */,
 				E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */,
+				74CD79542A267B4100BCE74E /* Trash.swift in Sources */,
 				E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */,
+				74CD79582A267B7100BCE74E /* Item.swift in Sources */,
 				E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */,
 				E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */,
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
 				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
+				74CD79562A267B5C00BCE74E /* Person.swift in Sources */,
 				74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */,
 				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
 			);
