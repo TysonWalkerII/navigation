@@ -28,7 +28,7 @@ class ViewModel: ObservableObject {
         progress += randomNumbersInAnArray[Int.random(in: 1..<randomNumbersInAnArray.count)]
         print("\(progress)")
     }
-    
+    //TODO: Call in view
     func changeLookOfRoom() {
         currentRoom.move()
             }
