@@ -8,7 +8,7 @@
 import Foundation
 
 // TODO: Make struct
-class Item :Identifiable{
+class Item :Identifiable, ObservableObject{
     
     
     let id = UUID()

@@ -14,6 +14,12 @@ class ViewModel: ObservableObject {
     @Published var progress: Double = 0.0
     @Published var choices:[Choice] = []
     @Published var selectedItem = Item()
+//    @Published var roomDialog:String
+    //chara dialog stuff
+    @Published var charaDialogCount  = 0
+    @Published var charaDialog = [""]
+    @Published var charaText = ""
+    //chara dialog stuff
 
     
     private let randomNumbersInAnArray = [1.0,14.0,7.0]
@@ -65,12 +71,23 @@ class ViewModel: ObservableObject {
 //                charaDialog = [""]
 //                charaText = ""
             }
+        
+    }
+    
+    func changeDialogue(){
+        if charaDialogCount == charaDialog.count - 1 || charaDialogCount == charaDialog.count{
+            charaDialogCount = 0
+            charaText = ""
+        }else{
+            charaDialogCount += 1
+            charaText = charaDialog[charaDialogCount]
+        }
     }
     
     init() {
-        self.currentRoom = .yourCell
+        self.currentRoom = .dangerZone
         self.player = .player
         self.trash = .init(itemsInTrash: [])
-        
+        self.choices = currentRoom.choices
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 //TODO: Make struct
 class Person: Identifiable{

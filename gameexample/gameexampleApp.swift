@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct gameexampleApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
            // ContentView()
            // room2View()
@@ -17,7 +19,7 @@ struct gameexampleApp: App {
            // turningright()
             //forward()
             //test()
-            RoomNavigation()
+           // RoomNavigation()
            // ProgressBarView()
         }
     }

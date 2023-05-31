@@ -7,17 +7,10 @@
 
 import SwiftUI
 
-struct ProgressBarView: View {
+struct StealthBarView: View {
  //   var randomNumbersInAnArray = [1.0,14.0,7.0]
     @State var progress: Double
-//    let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
-//    func addRisk(){
-//        progress += randomNumbersInAnArray[Int.random(in: 1..<randomNumbersInAnArray.count)]
-//    }
-    
-//    func removeRisk(){
-//        progress = 0
-//    }
+
 
         
 
@@ -43,7 +36,7 @@ struct ProgressBarView: View {
 
 struct ProgressBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBarView(progress: 9)
+        StealthBarView(progress: 9)
     }
 }
 

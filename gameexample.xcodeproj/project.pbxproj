@@ -25,8 +25,11 @@
 		E7175B482A17D0A30056A94D /* ChakraPetch-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B392A17D0110056A94D /* ChakraPetch-LightItalic.ttf */; };
 		E7175B492A17D0A30056A94D /* ChakraPetch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */; };
 		E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B947A2A2670A4006E5313 /* InventoryView.swift */; };
-		E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B947C2A2677AE006E5313 /* ProgressBarView.swift */; };
-		E78B94832A267F6F006E5313 /* ItemsInInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B94822A267F6F006E5313 /* ItemsInInventoryView.swift */; };
+		E78B947D2A2677AE006E5313 /* StealthBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B947C2A2677AE006E5313 /* StealthBarView.swift */; };
+		E78B94852A26863C006E5313 /* ItemsInRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B94842A26863C006E5313 /* ItemsInRoom.swift */; };
+		E78B94872A268937006E5313 /* RoomDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B94862A268937006E5313 /* RoomDialogView.swift */; };
+		E78B948B2A27A429006E5313 /* CharaTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B948A2A27A429006E5313 /* CharaTextView.swift */; };
+		E78B948D2A27A858006E5313 /* DoorButtonsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B948C2A27A858006E5313 /* DoorButtonsNavigation.swift */; };
 		E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */; };
 		E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6D32A043EE50056FBDB /* ContentView.swift */; };
 		E7D1D6D62A043EE60056FBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D1D6D52A043EE60056FBDB /* Assets.xcassets */; };
@@ -58,8 +61,11 @@
 		E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E7175B3F2A17D0110056A94D /* ChakraPetch-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E78B947A2A2670A4006E5313 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
-		E78B947C2A2677AE006E5313 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
-		E78B94822A267F6F006E5313 /* ItemsInInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsInInventoryView.swift; path = "../../../navigation copy 2/gameexample/ItemsInInventoryView.swift"; sourceTree = "<group>"; };
+		E78B947C2A2677AE006E5313 /* StealthBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StealthBarView.swift; sourceTree = "<group>"; };
+		E78B94842A26863C006E5313 /* ItemsInRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsInRoom.swift; path = "../../../navigation copy 2/gameexample/ItemsInRoom.swift"; sourceTree = "<group>"; };
+		E78B94862A268937006E5313 /* RoomDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoomDialogView.swift; path = "../../../navigation copy 2/gameexample/RoomDialogView.swift"; sourceTree = "<group>"; };
+		E78B948A2A27A429006E5313 /* CharaTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaTextView.swift; sourceTree = "<group>"; };
+		E78B948C2A27A858006E5313 /* DoorButtonsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorButtonsNavigation.swift; sourceTree = "<group>"; };
 		E7D1D6CE2A043EE50056FBDB /* gameexample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameexample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameexampleApp.swift; sourceTree = "<group>"; };
 		E7D1D6D32A043EE50056FBDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 		74CD79502A267B2200BCE74E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				E7D1D6E92A0AE1EF0056FBDB /* Room.swift */,
 				74CD79572A267B7100BCE74E /* Item.swift */,
 				74CD79552A267B5C00BCE74E /* Person.swift */,
@@ -99,9 +106,13 @@
 		74CD79592A267BBC00BCE74E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E78B947C2A2677AE006E5313 /* StealthBarView.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
 				E78B947A2A2670A4006E5313 /* InventoryView.swift */,
-				E78B94822A267F6F006E5313 /* ItemsInInventoryView.swift */,
+				E78B94842A26863C006E5313 /* ItemsInRoom.swift */,
+				E78B94862A268937006E5313 /* RoomDialogView.swift */,
+				E78B948A2A27A429006E5313 /* CharaTextView.swift */,
+				E78B948C2A27A858006E5313 /* DoorButtonsNavigation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,7 +153,6 @@
 		E7D1D6D02A043EE50056FBDB /* gameexample */ = {
 			isa = PBXGroup;
 			children = (
-				E78B947C2A2677AE006E5313 /* ProgressBarView.swift */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
 				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
@@ -152,7 +162,6 @@
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
 				74C14DEA2A0EB938000BD90B /* Direction.swift */,
 				74CD79502A267B2200BCE74E /* Models */,
-				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				74CD79592A267BBC00BCE74E /* Views */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
 				E7175B352A17CFC20056A94D /* Fonts */,
@@ -252,21 +261,24 @@
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
 				E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,
+				E78B948D2A27A858006E5313 /* DoorButtonsNavigation.swift in Sources */,
 				74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */,
 				E7D1D6E22A057D9B0056FBDB /* room2View.swift in Sources */,
 				74CD79522A267B3200BCE74E /* Choice.swift in Sources */,
 				E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */,
 				74CD79542A267B4100BCE74E /* Trash.swift in Sources */,
+				E78B94872A268937006E5313 /* RoomDialogView.swift in Sources */,
+				E78B948B2A27A429006E5313 /* CharaTextView.swift in Sources */,
+				E78B94852A26863C006E5313 /* ItemsInRoom.swift in Sources */,
 				E7D1D6E62A058A9E0056FBDB /* forward.swift in Sources */,
 				74CD79582A267B7100BCE74E /* Item.swift in Sources */,
 				E7D1D6D42A043EE50056FBDB /* ContentView.swift in Sources */,
 				E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */,
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
-				E78B94832A267F6F006E5313 /* ItemsInInventoryView.swift in Sources */,
 				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
 				74CD79562A267B5C00BCE74E /* Person.swift in Sources */,
 				74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */,
-				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
+				E78B947D2A2677AE006E5313 /* StealthBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
