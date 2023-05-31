@@ -140,26 +140,26 @@ struct RoomNavigation: View {
                 //                            charaText = charaDialog[charaDialogCount]
                 //                        }
                 //                    }
-                //                }
-                Section{
-                    //Items in roomf
-                    Text("Items in the room")
-                    ScrollView(.horizontal){
-                        HStack{
-                            ForEach(vm.currentRoom.itemsInRoom.indices, id: \.self){ thing in
-                                Button{
-                                    vm.player.inventory.append(vm.currentRoom.itemsInRoom[thing])
-                                    vm.currentRoom.itemsInRoom.remove(at: thing)
-                                }label:{
-                                    Image(vm.currentRoom.itemsInRoom[thing].itemImg ?? "")
-                                        .resizable().frame(width:70,height:70)
-                                }
-                            }
-                        }}.frame(width:400,height:70)
-                    
-                    
-                    
-                }
+//                //                }
+//                Section{
+//                    //Items in roomf
+//                    Text("Items in the room")
+//                    ScrollView(.horizontal){
+//                        HStack{
+//                            ForEach(vm.currentRoom.itemsInRoom.indices, id: \.self){ thing in
+//                                Button{
+//                                    vm.player.inventory.append(vm.currentRoom.itemsInRoom[thing])
+//                                    vm.currentRoom.itemsInRoom.remove(at: thing)
+//                                }label:{
+//                                    Image(vm.currentRoom.itemsInRoom[thing].itemImg ?? "")
+//                                        .resizable().frame(width:70,height:70)
+//                                }
+//                            }
+//                        }}.frame(width:400,height:70)
+//                    
+//                    
+//                    
+//                }
                 Section{
                     
                     

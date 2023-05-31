@@ -30,45 +30,12 @@ class ViewModel: ObservableObject {
     }
     
     func changeLookOfRoom() {
-           
-            guard let nameOfRoom = currentRoom.forwardRoom else{
-                return
+        currentRoom.move()
             }
-            
-            currentRoom.explored?.toggle()
-            currentRoom.move(.forward)
-            print( Room.rooms["\(nameOfRoom)"])
-            print(nameOfRoom)
-            currentRoom = Room.rooms[nameOfRoom] ?? Room( roompic: "", itemsInRoom: [],locked:false, key:nil, explored: false, dialog: "", choices: [])
-            //ROOM PICTURE
-            //CHARA PIC
-            //CHARA DIALOG
-            currentRoom.explored?.toggle()
-        guard let portrait = currentRoom.personInRoom?.portrait else { return }
-        if !portrait.isEmpty {
-                //MAYBE THE ROOMS NUMBER CAN GO UP EVERY TIME YOU ENTER IT, AND THE CHARACTER CAN USE THE DIALOG DEPENDING ON HOW MANY TIMER YOU HAVE ENTERED THE ROOM, MAYBE THERE CAN BE MANY DIFFERENT PIECES OF DIALOG THAT RANDOMLY SHOW UP INSTEAD
-                
-                //ROOM DIALOG
-                
-//                roomDialog = currentRoom.dialog ?? ""
-                choices = currentRoom.choices
-                
-              //  print("\(charaDialog)")
-              //  print("\(vm.currentRoom.itemsInRoom)")
-              //  print(vm.currentRoom.explored)
-                addRisk()
-                print("forward arrow")
-            }else{
-                
-//                charaImage = ""
-//                charaDialogCount  = 1
-//                charaDialog = [""]
-//                charaText = ""
-            }
-    }
+    
     
     init() {
-        self.currentRoom = .yourCell
+        self.currentRoom = Room.rooms[0]
         self.player = .player
         self.trash = .init(itemsInTrash: [])
         
