@@ -12,6 +12,7 @@ struct InventoryView: View {
     @Binding var tappedOnItem: Item
     @ObservedObject var vm: ViewModel
     var body: some View {
+        
         Section{
             VStack{
                 Text("Inventory").font(.custom(
