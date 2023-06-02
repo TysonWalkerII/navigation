@@ -6,21 +6,36 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var currentRoom: Room
     @Published var player:Person
     @Published var trash: Trash
     @Published var progress: Double = 0.0
-    @Published var choices:[Choice] = []
+    var choices:[Choice] {
+        if let choices = currentRoom.choices {
+            return choices
+        } else {
+            return []
+        }
+    }
     @Published var selectedItem = Item()
+//    @Published var roomDialog:String
+    //chara dialog stuff
+    @Published var charaDialogCount  = 0
+    @Published var charaDialog = [""]
+    @Published var charaText = ""
+    @Published var thisThing = []
+    //chara dialog stuff
 
     
     private let randomNumbersInAnArray = [1.0,14.0,7.0]
 
-    func useItem(item:String){
-        player.inventory.remove(at:player.inventory.firstIndex(where:{$0.itemName == item}) ?? 0)
-        print("here is the item  \(item)")
+    func useItem(item:Item){
+        player.inventory.removeAll { inventoryItem in
+            inventoryItem.id == item.id
+        }
     }
     
     func addRisk(){
@@ -31,13 +46,12 @@ class ViewModel: ObservableObject {
     
     func changeLookOfRoom() {
         currentRoom.move()
-            }
+    }
     
     
     init() {
         self.currentRoom = Room.rooms[0]
         self.player = .player
         self.trash = .init(itemsInTrash: [])
-        
     }
 }

@@ -8,10 +8,9 @@
 import Foundation
 
 // TODO: Make struct
-//struct Item : Identifiable{
-struct Item {
+struct Item: Identifiable {
     
-//    let id = UUID()
+    let id = UUID()
     public var itemImg:String?
     public var itemName:String?
     public var itemDescription:String?
