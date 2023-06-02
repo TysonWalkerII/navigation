@@ -49,7 +49,6 @@
 		74CD79572A267B7100BCE74E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A935FAD82A2913BF00B3CDDF /* TextboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxView.swift; sourceTree = "<group>"; };
 		A987571C2A2A6DB200226BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A99F84382A2A75F6006B13D0 /* IventoryboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IventoryboxView.swift; sourceTree = "<group>"; };
 		E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
 		E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
 		E7175B382A17D0110056A94D /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
@@ -88,14 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7413E42A2A2A781A00EFA01E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				A99F84382A2A75F6006B13D0 /* IventoryboxView.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		74CD79502A267B2200BCE74E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +135,6 @@
 			children = (
 				E7D1D6D02A043EE50056FBDB /* gameexample */,
 				E7D1D6CF2A043EE50056FBDB /* Products */,
-				7413E42A2A2A781A00EFA01E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
