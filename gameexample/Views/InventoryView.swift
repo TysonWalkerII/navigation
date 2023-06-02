@@ -30,6 +30,9 @@ struct InventoryView: View {
                                 Image(vm.player.inventory[thing].itemImg ?? "")
                                     .resizable().scaledToFit()
                             }
+                            
+//                            vm.player.inventory.append(vm.player.inventory[thing])
+                            //vm.thisThing.append(thing)
                         }
                         
                     } .padding(.horizontal)

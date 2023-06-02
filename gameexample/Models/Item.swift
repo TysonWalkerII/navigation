@@ -8,7 +8,12 @@
 import Foundation
 
 // TODO: Make struct
-class Item :Identifiable, ObservableObject{
+class Item :Identifiable, ObservableObject, Equatable{
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        lhs.itemName == rhs.itemName
+        
+    }
+    
     
     
     let id = UUID()

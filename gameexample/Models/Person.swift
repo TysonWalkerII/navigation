@@ -9,7 +9,11 @@ import Foundation
 import SwiftUI
 
 //TODO: Make struct
-class Person: Identifiable{
+class Person: Identifiable, Equatable{
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        lhs.dialog == rhs.dialog
+    }
+    
     let id = UUID()
     public var hp: Int?
     public var portrait: String?
@@ -27,7 +31,7 @@ class Person: Identifiable{
         self.dialog2 = dialog2
         self.nameOfPerson = nameOfPerson
     }
-    static let playersItems = [Item(itemImg: "column",itemName: "column",itemDescription: "This beautiful column is used to open up doors and stuff thats about it"),Item(itemImg: "bucket",itemName: "Bucket of Cheese Ballz",itemDescription: "So delicious...just eat the whole thing")]
+    static let playersItems = [Item(itemImg: "column",itemName: "column",itemDescription: "This beautiful column is used to open up doors and stuff thats about it"),Item(itemImg: "BucketofCheeseBallz",itemName: "Bucket of Cheese Ballz",itemDescription: "So delicious...just eat the whole thing")]
     static let player = Person(hp: 100, portrait: "botaningame", dialog: [], inventory: playersItems, dialog2: [], choice: nil, nameOfPerson: nil)
     
     

@@ -65,7 +65,10 @@ struct RoomNavigation: View {
                 
             }.scaledToFill()
             
-            StealthBarView(progress: vm.progress)
+           
+          
+                StealthBarView()
+            
             
 //            DoorButtonsNavigation(vm: vm)
             

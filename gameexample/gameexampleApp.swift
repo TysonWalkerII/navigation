@@ -19,7 +19,7 @@ struct gameexampleApp: App {
            // turningright()
             //forward()
             //test()
-           // RoomNavigation()
+            RoomNavigation()
            // ProgressBarView()
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var currentRoom: Room
@@ -19,14 +20,25 @@ class ViewModel: ObservableObject {
     @Published var charaDialogCount  = 0
     @Published var charaDialog = [""]
     @Published var charaText = ""
+    @Published var thisThing = []
     //chara dialog stuff
 
     
     private let randomNumbersInAnArray = [1.0,14.0,7.0]
 
     func useItem(item:String){
-        player.inventory.remove(at:player.inventory.firstIndex(where:{$0.itemName == item}) ?? 0)
-        print("here is the item  \(item)")
+//        player.inventory.remove(at:player.inventory.firstIndex(where:{$0.itemName == item}) ?? 0)
+//        print("here is the item  \(item)")
+//        print("\(player.inventory[0].itemName)")
+        
+       // ForEach(player.inventory, id: \.id){ thing in
+           // if thing.itemName == item{
+        
+        player.inventory.remove(at: player.inventory.firstIndex(of: Item(itemImg: "\(item)", itemName: "\(item)", itemDescription: "\(item)")) ?? 0)
+        print("\(item)")
+            //}
+       // }
+        
     }
     
     func addRisk(){
@@ -74,15 +86,6 @@ class ViewModel: ObservableObject {
         
     }
     
-    func changeDialogue(){
-        if charaDialogCount == charaDialog.count - 1 || charaDialogCount == charaDialog.count{
-            charaDialogCount = 0
-            charaText = ""
-        }else{
-            charaDialogCount += 1
-            charaText = charaDialog[charaDialogCount]
-        }
-    }
     
     init() {
         self.currentRoom = .dangerZone
