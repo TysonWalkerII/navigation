@@ -13,6 +13,7 @@
 		74CD79542A267B4100BCE74E /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79532A267B4100BCE74E /* Trash.swift */; };
 		74CD79562A267B5C00BCE74E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79552A267B5C00BCE74E /* Person.swift */; };
 		74CD79582A267B7100BCE74E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79572A267B7100BCE74E /* Item.swift */; };
+		A935FAD92A2913BF00B3CDDF /* TextboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935FAD82A2913BF00B3CDDF /* TextboxView.swift */; };
 		E7175B402A17D09A0056A94D /* ChakraPetch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3D2A17D0110056A94D /* ChakraPetch-Bold.ttf */; };
 		E7175B412A17D09E0056A94D /* ChakraPetch-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3E2A17D0110056A94D /* ChakraPetch-BoldItalic.ttf */; };
 		E7175B422A17D0A30056A94D /* ChakraPetch-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7175B3A2A17D0110056A94D /* ChakraPetch-Light.ttf */; };
@@ -48,6 +49,8 @@
 		74CD79532A267B4100BCE74E /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
 		74CD79552A267B5C00BCE74E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		74CD79572A267B7100BCE74E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A935FAD82A2913BF00B3CDDF /* TextboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxView.swift; sourceTree = "<group>"; };
+		A987571C2A2A6DB200226BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7175B362A17D0110056A94D /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
 		E7175B372A17D0110056A94D /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
 		E7175B382A17D0110056A94D /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 				E78B947C2A2677AE006E5313 /* StealthBarView.swift */,
 				74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */,
 				E78B947A2A2670A4006E5313 /* InventoryView.swift */,
+				A935FAD82A2913BF00B3CDDF /* TextboxView.swift */,
 				E78B94842A26863C006E5313 /* ItemsInRoom.swift */,
 				E78B94862A268937006E5313 /* RoomDialogView.swift */,
 				E78B948A2A27A429006E5313 /* CharaTextView.swift */,
@@ -151,6 +155,7 @@
 		E7D1D6D02A043EE50056FBDB /* gameexample */ = {
 			isa = PBXGroup;
 			children = (
+				A987571C2A2A6DB200226BE6 /* Info.plist */,
 				E7D1D6D12A043EE50056FBDB /* gameexampleApp.swift */,
 				E7D1D6E12A057D9B0056FBDB /* room2View.swift */,
 				E7D1D6D32A043EE50056FBDB /* ContentView.swift */,
@@ -273,6 +278,7 @@
 				E7D1D6E42A05895D0056FBDB /* turningright.swift in Sources */,
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
 				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
+				A935FAD92A2913BF00B3CDDF /* TextboxView.swift in Sources */,
 				74CD79562A267B5C00BCE74E /* Person.swift in Sources */,
 				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
 			);
@@ -405,15 +411,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gameexample/Preview Content\"";
-				DEVELOPMENT_TEAM = 4SW86B8349;
+				DEVELOPMENT_TEAM = 9S7HT9D9U9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = gameexample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,15 +442,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gameexample/Preview Content\"";
-				DEVELOPMENT_TEAM = 4SW86B8349;
+				DEVELOPMENT_TEAM = 9S7HT9D9U9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = gameexample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
