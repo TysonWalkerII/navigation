@@ -8,7 +8,6 @@
 import Foundation
 
 // TODO: Make struct
-//struct Item : Identifiable{
 struct Item {
     
 //    let id = UUID()

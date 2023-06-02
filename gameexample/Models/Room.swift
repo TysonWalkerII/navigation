@@ -20,6 +20,7 @@ struct Room {
     mutating func move() {
         self = Room.rooms.randomElement()!
     }
+        
     static let rooms: [Room] = [
         Room(roompic: "MainRoom", itemsInRoom: [Item.items.randomElement()!]),
         Room(roompic: "room", itemsInRoom: [Item.items.randomElement()!]),
