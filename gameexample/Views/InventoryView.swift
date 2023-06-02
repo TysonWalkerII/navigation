@@ -27,26 +27,15 @@ struct InventoryView: View {
                                 
                                 tappedOnItem = vm.player.inventory[thing]
                                 print(tappedOnItem.itemImg)
-                                //                                        if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
-                                //                                            vm.trash.itemsInTrash.append(vm.player.inventory[thing])
-                                //                                            vm.player.inventory.remove(at: thing)
-                                //                                            vm.currentRoom.locked.toggle()
-                                //                                            showInventory.toggle()
-                                //                                        }else{
-                                //                                            VStack{
-                                //                                                //                                                Image("\(vm.player.inventory[thing].itemImg)")
-                                //                                                //                                                Text(vm.player.inventory[thing].itemName ?? "")
-                                //                                                //                                                Text(vm.player.inventory[thing].itemDescription ?? "")
-                                //                                                Rectangle()
-                                //                                            }
-                                //
-                                //                                        }
                             }label:{
                                 Image(vm.player.inventory[thing].itemImg ?? "")
                                     .resizable().scaledToFit()
                                     .border(.white)
                                     .padding(3)
                             }
+                            
+//                            vm.player.inventory.append(vm.player.inventory[thing])
+                            //vm.thisThing.append(thing)
                         }
                         
                     } .padding(.horizontal)
