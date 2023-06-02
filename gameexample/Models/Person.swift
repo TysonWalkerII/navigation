@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 //TODO: Make struct
-class Person: Identifiable, Equatable{
+struct Person: Identifiable, Equatable{
     static func == (lhs: Person, rhs: Person) -> Bool {
         lhs.dialog == rhs.dialog
     }
