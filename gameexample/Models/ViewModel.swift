@@ -13,7 +13,13 @@ class ViewModel: ObservableObject {
     @Published var player:Person
     @Published var trash: Trash
     @Published var progress: Double = 0.0
-    @Published var choices:[Choice] = []
+    var choices:[Choice] {
+        if let choices = currentRoom.choices {
+            return choices
+        } else {
+            return []
+        }
+    }
     @Published var selectedItem = Item()
 //    @Published var roomDialog:String
     //chara dialog stuff
@@ -44,9 +50,8 @@ class ViewModel: ObservableObject {
     
     
     init() {
-        self.currentRoom = .dangerZone
+        self.currentRoom = Room.rooms[0]
         self.player = .player
         self.trash = .init(itemsInTrash: [])
-        self.choices = currentRoom.choices
     }
 }
