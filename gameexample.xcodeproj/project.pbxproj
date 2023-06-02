@@ -91,7 +91,6 @@
 		74CD79502A267B2200BCE74E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
 				E7D1D6E92A0AE1EF0056FBDB /* Room.swift */,
 				74CD79572A267B7100BCE74E /* Item.swift */,
 				74CD79552A267B5C00BCE74E /* Person.swift */,
@@ -132,6 +131,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		E78B94AA2A2A6DA4006E5313 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E7D1D6C52A043EE40056FBDB = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +165,7 @@
 				E7D1D6E52A058A9E0056FBDB /* forward.swift */,
 				E7D1D6E72A0A2AFC0056FBDB /* test.swift */,
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
+				E78B94AA2A2A6DA4006E5313 /* ViewModel */,
 				74CD79502A267B2200BCE74E /* Models */,
 				74CD79592A267BBC00BCE74E /* Views */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
@@ -274,7 +282,7 @@
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
 				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
 				74CD79562A267B5C00BCE74E /* Person.swift in Sources */,
-				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
+				E78B947D2A2677AE006E5313 /* StealthBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
