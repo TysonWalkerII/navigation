@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEA2A0EB938000BD90B /* Direction.swift */; };
 		74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */; };
 		74C14DEF2A0EB9BE000BD90B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */; };
 		74CD79522A267B3200BCE74E /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD79512A267B3200BCE74E /* Choice.swift */; };
@@ -43,7 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74C14DEA2A0EB938000BD90B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		74C14DEC2A0EB976000BD90B /* RoomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNavigation.swift; sourceTree = "<group>"; };
 		74C14DEE2A0EB9BE000BD90B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		74CD79512A267B3200BCE74E /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				E7D1D6E52A058A9E0056FBDB /* forward.swift */,
 				E7D1D6E72A0A2AFC0056FBDB /* test.swift */,
 				E7D1D6EB2A0C3A510056FBDB /* test2.swift */,
-				74C14DEA2A0EB938000BD90B /* Direction.swift */,
 				74CD79502A267B2200BCE74E /* Models */,
 				74CD79592A267BBC00BCE74E /* Views */,
 				E7D1D6D52A043EE60056FBDB /* Assets.xcassets */,
@@ -277,8 +274,7 @@
 				E7D1D6D22A043EE50056FBDB /* gameexampleApp.swift in Sources */,
 				E78B947B2A2670A4006E5313 /* InventoryView.swift in Sources */,
 				74CD79562A267B5C00BCE74E /* Person.swift in Sources */,
-				74C14DEB2A0EB938000BD90B /* Direction.swift in Sources */,
-				E78B947D2A2677AE006E5313 /* StealthBarView.swift in Sources */,
+				E78B947D2A2677AE006E5313 /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

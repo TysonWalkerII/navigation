@@ -53,7 +53,7 @@ struct RoomNavigation: View {
             VStack{
                 Section{
                     //Items in room
-                    ItemsInRoom(vm:vm)
+//                    ItemsInRoom(vm:vm)
                 }
                 Section{
                    Button{
