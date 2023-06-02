@@ -14,77 +14,80 @@ struct InventoryView: View {
     var body: some View {
         
         Section{
-            VStack{
-                HStack {
-                    Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
-                    Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
-                }
-                ScrollView{
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(vm.player.inventory.indices, id: \.self){ thing in
-                            Button{
-                                
-                                
-                                tappedOnItem = vm.player.inventory[thing]
-                                print(tappedOnItem.itemImg)
-                                //                                        if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
-                                //                                            vm.trash.itemsInTrash.append(vm.player.inventory[thing])
-                                //                                            vm.player.inventory.remove(at: thing)
-                                //                                            vm.currentRoom.locked.toggle()
-                                //                                            showInventory.toggle()
-                                //                                        }else{
-                                //                                            VStack{
-                                //                                                //                                                Image("\(vm.player.inventory[thing].itemImg)")
-                                //                                                //                                                Text(vm.player.inventory[thing].itemName ?? "")
-                                //                                                //                                                Text(vm.player.inventory[thing].itemDescription ?? "")
-                                //                                                Rectangle()
-                                //                                            }
-                                //
-                                //                                        }
-                            }label:{
-                                Image(vm.player.inventory[thing].itemImg ?? "")
-                                    .resizable().scaledToFit()
-                                    .border(.white)
-                                    .padding(3)
-                            }
-                        }
-                        
-                    } .padding(.horizontal)
-                    
-                    
-                }.frame(maxWidth:300,maxHeight: 300)
+            ZStack{
                 VStack{
-                    HStack{
-                        Image("\(tappedOnItem.itemImg ?? "")").resizable().scaledToFit()
-                            .border(.white)
-                        VStack{
-                            Section{
-                                Text("""
+                    HStack {
+                        Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
+                        Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
+                    }
+                    ScrollView{
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(vm.player.inventory.indices, id: \.self){ thing in
+                                Button{
+                                    
+                                    
+                                    tappedOnItem = vm.player.inventory[thing]
+                                    print(tappedOnItem.itemImg)
+                                    //                                        if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
+                                    //                                            vm.trash.itemsInTrash.append(vm.player.inventory[thing])
+                                    //                                            vm.player.inventory.remove(at: thing)
+                                    //                                            vm.currentRoom.locked.toggle()
+                                    //                                            showInventory.toggle()
+                                    //                                        }else{
+                                    //                                            VStack{
+                                    //                                                //                                                Image("\(vm.player.inventory[thing].itemImg)")
+                                    //                                                //                                                Text(vm.player.inventory[thing].itemName ?? "")
+                                    //                                                //                                                Text(vm.player.inventory[thing].itemDescription ?? "")
+                                    //                                                Rectangle()
+                                    //                                            }
+                                    //
+                                    //                                        }
+                                }label:{
+                                    Image(vm.player.inventory[thing].itemImg ?? "")
+                                        .resizable().scaledToFit()
+                                        .border(.white)
+                                        .padding(3)
+                                }
+                            }
+                            
+                        } .padding(.horizontal)
+                        
+                        
+                    }.frame(maxWidth:300,maxHeight: 300)
+                    VStack{
+                        HStack{
+                            Image("\(tappedOnItem.itemImg ?? "")").resizable().scaledToFit()
+                                .border(.white)
+                            VStack{
+                                Section{
+                                    Text("""
                                          \(tappedOnItem.itemName ?? "")
                                          """).font(.custom(
                                             "ChakraPetch-Bold",
                                             fixedSize: 18)).padding()
+                                }
+                                
+                                
                             }
                             
+                        }.padding()
+                        Text("\(tappedOnItem.itemDescription ?? "")").font(.custom(
+                            "ChakraPetch-Light",
                             
-                        }
-                        
-                    }.padding()
-                    Text("\(tappedOnItem.itemDescription ?? "")").font(.custom(
-                        "ChakraPetch-Light",
-                        
-                        fixedSize: 17)).padding()
-                }.frame(maxWidth:300,maxHeight:300)
-                
-                
+                            fixedSize: 17)).padding()
+                    }.frame(maxWidth:300,maxHeight:300)
+                    
+                    
+                    
+                    
+                }
                 
                 
             }
             
-            
-        }.background(.gray)
-        
+        }
     }
+    IventoryboxView()
 }
 
 struct InventoryDummyView: View {
