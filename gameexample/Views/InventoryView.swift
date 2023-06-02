@@ -15,10 +15,10 @@ struct InventoryView: View {
         
         Section{
             VStack{
-                Text("Inventory").font(.custom(
-                    "ChakraPetch-Bold",
-                    
-                    fixedSize: 18)).padding()
+                HStack {
+                    Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
+                    Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
+                }
                 ScrollView{
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(vm.player.inventory.indices, id: \.self){ thing in
@@ -44,6 +44,8 @@ struct InventoryView: View {
                             }label:{
                                 Image(vm.player.inventory[thing].itemImg ?? "")
                                     .resizable().scaledToFit()
+                                    .border(.white)
+                                    .padding(3)
                             }
                         }
                         
@@ -54,13 +56,13 @@ struct InventoryView: View {
                 VStack{
                     HStack{
                         Image("\(tappedOnItem.itemImg ?? "")").resizable().scaledToFit()
+                            .border(.white)
                         VStack{
                             Section{
                                 Text("""
-                                                                         \(tappedOnItem.itemName ?? "")
+                                         \(tappedOnItem.itemName ?? "")
                                          """).font(.custom(
                                             "ChakraPetch-Bold",
-                                            
                                             fixedSize: 18)).padding()
                             }
                             
