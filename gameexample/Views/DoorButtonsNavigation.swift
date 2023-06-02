@@ -51,7 +51,6 @@ struct DoorButtonsNavigation: View {
 
 struct DoorButtonsNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var vm = ViewModel()
-        DoorButtonsNavigation(vm:vm)
+        DoorButtonsNavigation(vm:ViewModel())
     }
 }

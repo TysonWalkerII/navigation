@@ -39,9 +39,9 @@ struct RoomNavigation: View {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
            // }
             
-            if vm.choices.count != 0 && !roomDialog.isEmpty {
-                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")
-            }
+//            if vm.choices.count != 0 && !roomDialog.isEmpty {
+//                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")
+//            }
             
             
         
