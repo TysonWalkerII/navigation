@@ -59,7 +59,6 @@ struct CharaTextView: View {
 
 struct CharaTextView_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var vm = ViewModel()
-        CharaTextView(vm: vm)
+        CharaTextView(vm: ViewModel())
     }
 }
