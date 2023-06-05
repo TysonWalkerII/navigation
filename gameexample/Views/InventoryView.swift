@@ -15,38 +15,12 @@ struct InventoryView: View {
         
         Section{
             ZStack{
-                VStack{
-                    HStack {
-                        Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
-                        Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
-                    }
-                    ScrollView{
-                        LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(vm.player.inventory.indices, id: \.self){ thing in
-                                Button{
-                                    
-                                    
-                                    tappedOnItem = vm.player.inventory[thing]
-                                    print(tappedOnItem.itemImg)
-                                }label:{
-                                    Image(vm.player.inventory[thing].itemImg ?? "")
-                                        .resizable().scaledToFit()
-                                        .border(.white)
-                                        .padding(3)
-                                }
-                                
-                                //                            vm.player.inventory.append(vm.player.inventory[thing])
-                                //vm.thisThing.append(thing)
-                            }
-                            
-                        } .padding(.horizontal)
-                        
-                        
-                    }.frame(maxWidth:300,maxHeight: 300)
+                InventoryBoxView()
+                    .offset(x: 25, y:30)
                     VStack{
                         HStack {
-                            Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
-                            Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding()
+                            Text("INVENTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding().foregroundColor(.white)
+                            Text("HISTORY").font(.custom("ChakraPetch-Bold", size: 21)).padding().foregroundColor(.white)
                         }
                         ScrollView{
                             LazyVGrid(columns: columns, spacing: 20) {
@@ -92,7 +66,7 @@ struct InventoryView: View {
                                          \(tappedOnItem.itemName ?? "")
                                          """).font(.custom(
                                             "ChakraPetch-Bold",
-                                            fixedSize: 18)).padding()
+                                            fixedSize: 18)).padding().foregroundColor(.white)
                                     }
                                     
                                     
@@ -102,7 +76,7 @@ struct InventoryView: View {
                             Text("\(tappedOnItem.itemDescription ?? "")").font(.custom(
                                 "ChakraPetch-Light",
                                 
-                                fixedSize: 17)).padding()
+                                fixedSize: 17)).padding().foregroundColor(.white)
                         }.frame(maxWidth:300,maxHeight:300)
                         
                         
@@ -114,21 +88,21 @@ struct InventoryView: View {
                 }
                 
             }
+        } 
+    }
+    
+    struct InventoryDummyView: View {
+        @State var tappedOnItem = Item(itemImg: "column",itemName: "column")
+        @StateObject var vm = ViewModel()
+        var body: some View {
+            InventoryView(columns: [
+                GridItem(.adaptive(minimum: 80))], tappedOnItem: $tappedOnItem, vm: vm)
         }
     }
-}
-
-struct InventoryDummyView: View {
-    @State var tappedOnItem = Item(itemImg: "column",itemName: "column")
-    @StateObject var vm = ViewModel()
-    var body: some View {
-        InventoryView(columns: [
-            GridItem(.adaptive(minimum: 80))], tappedOnItem: $tappedOnItem, vm: vm)
+    
+    struct InventoryView_Previews: PreviewProvider {
+        static var previews: some View {
+            InventoryDummyView()
+        }
     }
-}
 
-struct InventoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        InventoryDummyView()
-    }
-}
