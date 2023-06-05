@@ -33,11 +33,12 @@ struct RoomNavigation: View {
     var body: some View {
         ZStack{
             Image("\(vm.currentRoom.roompic)")
-            CharaTextView(vm: vm)
+//            Text((vm.currentRoom.key?.itemName)!)
+//            CharaTextView(vm: vm)
            
-           // if showInventory {
+            if showInventory {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
-           // }
+            }
             
 //            if vm.choices.count != 0 && !roomDialog.isEmpty {
 //                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")
@@ -51,23 +52,23 @@ struct RoomNavigation: View {
             
             
             VStack{
-                Section{
-                    //Items in room
-//                    ItemsInRoom(vm:vm)
-                }
-                Section{
+//                Section{
+//                    Image("\(vm.currentRoom.key?.itemImg)")
+//                }
+//                Section{
                    Button{
                         showInventory.toggle()
                     }label: {
-                        Image(systemName: "capslock.fill").scaleEffect(2)
+                        Image(systemName: "backpack.fill").scaleEffect(3)
                     }
-                }
+                    .offset(x: 170, y: -375)
+//                }
                 
             }.scaledToFill()
             
            
           
-                StealthBarView()
+//                StealthBarView()
             
             
 //            DoorButtonsNavigation(vm: vm)

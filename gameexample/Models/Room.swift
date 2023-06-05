@@ -24,7 +24,11 @@ struct Room {
     static let rooms: [Room] = [
         Room(roompic: "MainRoom", itemsInRoom: [Item.items.randomElement()!]),
         Room(roompic: "room", itemsInRoom: [Item.items.randomElement()!]),
-        Room(roompic: "", itemsInRoom: [Item.items.randomElement()!]),
+        Room(roompic: "poolrooms", itemsInRoom: [Item.items.randomElement()!]),
+        Room(roompic: "room1", itemsInRoom: [Item.items.randomElement()!]),
+        Room(roompic: "room2", itemsInRoom: [Item.items.randomElement()!]),
+        Room(roompic: "hallway", itemsInRoom: [Item.items.randomElement()!]),
+        Room(roompic: "backgroundtestthingy", itemsInRoom: [Item.items.randomElement()!]),
         Room(roompic: "", itemsInRoom: [Item.items.randomElement()!]),
         Room(roompic: "", itemsInRoom: [Item.items.randomElement()!])
              ]
