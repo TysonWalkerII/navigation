@@ -40,7 +40,6 @@ struct RoomNavigation: View {
            // }
             
             if vm.choices.count != 0 && !roomDialog.isEmpty {
-                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")
             }
             
             
