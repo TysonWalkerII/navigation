@@ -40,10 +40,17 @@ struct RoomNavigation: View {
             }
 //            Text((vm.currentRoom.key?.itemName)!)
 //            CharaTextView(vm: vm)
+            Doors()
+            CharaTextView(vm: vm)
+           
+            if vm.showInventory {
+          
+            InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
             
             if showInventory {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
             }
+
             
 //            if vm.choices.count != 0 && !roomDialog.isEmpty {
 //                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")

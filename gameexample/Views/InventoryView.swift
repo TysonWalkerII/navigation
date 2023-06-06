@@ -70,7 +70,6 @@ struct InventoryView: View {
                             
                         }.frame(width:300,height: 300)
                         VStack{
-                            
                             HStack{
                                 Image("\(tappedOnItem.itemImg ?? "")").resizable().scaledToFit()
                                     .border(.white)
@@ -104,8 +103,6 @@ struct InventoryView: View {
             }
             }
         } 
-    
-    
     struct InventoryDummyView: View {
         @State var tappedOnItem = Item(itemImg: "column",itemName: "column")
         @StateObject var vm = ViewModel()
@@ -119,5 +116,3 @@ struct InventoryView: View {
         static var previews: some View {
             InventoryDummyView()
         }
-    }
-
