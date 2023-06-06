@@ -38,8 +38,6 @@ struct RoomNavigation: View {
            
             if showInventory {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
-//                    .frame(width: 200.0, height: 200.0)
-                    .offset(x: 21, y: 82)
             }
             
 //            if vm.choices.count != 0 && !roomDialog.isEmpty {
@@ -61,7 +59,7 @@ struct RoomNavigation: View {
                    Button{
                         showInventory.toggle()
                     }label: {
-                        Image(systemName: "backpack.fill").scaleEffect(3)
+                        Image(systemName: "backpack.fill").scaleEffect(2.5)
                     }
                     .offset(x: 170, y: -375)
 //                }

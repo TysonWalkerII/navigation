@@ -90,7 +90,7 @@ struct InventoryView: View {
                             Text("\(tappedOnItem.itemDescription ?? "")").font(.custom(
                                 "ChakraPetch-Light",
                                 
-                                fixedSize: 17)).padding().foregroundColor(.black)
+                                fixedSize: 17)).padding().foregroundColor(.white)
                         }.frame(maxWidth:300,maxHeight:300)
                         
                         
@@ -104,7 +104,7 @@ struct InventoryView: View {
             }
             }
         } 
-    }
+    
     
     struct InventoryDummyView: View {
         @State var tappedOnItem = Item(itemImg: "column",itemName: "column")
