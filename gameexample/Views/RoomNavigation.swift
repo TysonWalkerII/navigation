@@ -38,6 +38,8 @@ struct RoomNavigation: View {
            
             if showInventory {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
+//                    .frame(width: 200.0, height: 200.0)
+                    .offset(x: 21, y: 82)
             }
             
 //            if vm.choices.count != 0 && !roomDialog.isEmpty {

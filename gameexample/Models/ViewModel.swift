@@ -26,7 +26,6 @@ class ViewModel: ObservableObject {
     @Published var charaDialogCount  = 0
     @Published var charaDialog = [""]
     @Published var charaText = ""
-    @Published var thisThing = []
     //chara dialog stuff
 
     
