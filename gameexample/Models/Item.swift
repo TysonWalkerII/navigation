@@ -27,6 +27,7 @@ struct Item: Identifiable {
     
    
     
-    static let items: [Item] = [Item(itemImg: "Bread", itemName: "Bread", itemDescription: "It's just Bread..."), Item(itemImg: "coffeecup", itemName: "Koffee", itemDescription: "Get energized with our new invention... A Cup O' Joe"), Item(itemImg: "", itemName: "here", itemDescription: ""), Item(itemImg: "", itemName: "we", itemDescription: ""), Item(itemImg: "", itemName: "go", itemDescription: ""), Item(itemImg: "", itemName: "son", itemDescription: ""), Item(itemImg: "", itemName: "yep", itemDescription: "")]
+    static let items: [Item] = [Item(itemImg: "Bread", itemName: "Bread", itemDescription: "It's just Bread..."), Item(itemImg: "coffeecup", itemName: "Koffee", itemDescription: "Get energized with our new invention... A Cup O' Joe")]
+//    Item(itemImg: "", itemName: "here", itemDescription: ""), Item(itemImg: "", itemName: "we", itemDescription: ""), Item(itemImg: "", itemName: "go", itemDescription: ""), Item(itemImg: "", itemName: "son", itemDescription: ""), Item(itemImg: "", itemName: "yep", itemDescription: "")]
 }
 

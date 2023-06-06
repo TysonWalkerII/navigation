@@ -42,8 +42,8 @@ struct InventoryView: View {
                                         
                                         
                                         tappedOnItem = vm.player.inventory[thing]
-                                        print(tappedOnItem.itemImg)
-                                        //  if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
+                                        print(tappedOnItem.itemImg!)
+                                        //                                        if vm.currentRoom.key?.itemName == vm.player.inventory[thing].itemName{
                                         //                                            vm.trash.itemsInTrash.append(vm.player.inventory[thing])
                                         //                                            vm.player.inventory.remove(at: thing)
                                         //                                            vm.currentRoom.locked.toggle()
@@ -96,6 +96,13 @@ struct InventoryView: View {
                         
                         
                     }
+                    
+                    
+                }
+                
+            }
+            }
+        } 
     struct InventoryDummyView: View {
         @State var tappedOnItem = Item(itemImg: "column",itemName: "column")
         @StateObject var vm = ViewModel()

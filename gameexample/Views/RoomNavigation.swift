@@ -33,6 +33,13 @@ struct RoomNavigation: View {
     var body: some View {
         ZStack(alignment:  Alignment(horizontal: .center, vertical: .center)){
             Image("\(vm.currentRoom.roompic)")
+            Button{
+                vm.changeLookOfRoom()
+            }label: {
+                Image(systemName: "door.right.hand.open").scaleEffect(5)
+            }
+//            Text((vm.currentRoom.key?.itemName)!)
+//            CharaTextView(vm: vm)
             Doors()
             CharaTextView(vm: vm)
            
@@ -40,7 +47,8 @@ struct RoomNavigation: View {
           
             InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
             
-               
+            if showInventory {
+                InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
             }
 
             
@@ -56,23 +64,23 @@ struct RoomNavigation: View {
             
             
             VStack{
-                Section{
-                    //Items in room
-//                    ItemsInRoom(vm:vm)
-                }
-                Section{
+//                Section{
+//                    Image("\(vm.currentRoom.key?.itemImg)")
+//                }
+//                Section{
                    Button{
                         showInventory.toggle()
                     }label: {
-                        Image(systemName: "capslock.fill").scaleEffect(2)
+                        Image(systemName: "backpack.fill").scaleEffect(2.5)
                     }
-                }
+                    .offset(x: 170, y: -375)
+//                }
                 
             }.scaledToFill()
             
            
           
-                StealthBarView()
+//                StealthBarView()
             
             
 //            DoorButtonsNavigation(vm: vm)
