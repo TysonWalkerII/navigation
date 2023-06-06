@@ -39,6 +39,7 @@
 		E7D1D6E82A0A2AFC0056FBDB /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E72A0A2AFC0056FBDB /* test.swift */; };
 		E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6E92A0AE1EF0056FBDB /* Room.swift */; };
 		E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1D6EB2A0C3A510056FBDB /* test2.swift */; };
+		E7DFD3282A2FA187004C9C42 /* Doors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DFD3272A2FA187004C9C42 /* Doors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		E7D1D6E72A0A2AFC0056FBDB /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		E7D1D6E92A0AE1EF0056FBDB /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		E7D1D6EB2A0C3A510056FBDB /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
+		E7DFD3272A2FA187004C9C42 /* Doors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				A99F843C2A2E512F006B13D0 /* InventoryBoxView.swift */,
 				E78B948A2A27A429006E5313 /* CharaTextView.swift */,
 				E78B948C2A27A858006E5313 /* DoorButtonsNavigation.swift */,
+				E7DFD3272A2FA187004C9C42 /* Doors.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DFD3282A2FA187004C9C42 /* Doors.swift in Sources */,
 				E7D1D6EC2A0C3A510056FBDB /* test2.swift in Sources */,
 				E7D1D6EA2A0AE1EF0056FBDB /* Room.swift in Sources */,
 				74C14DED2A0EB976000BD90B /* RoomNavigation.swift in Sources */,

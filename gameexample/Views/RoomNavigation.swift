@@ -33,6 +33,7 @@ struct RoomNavigation: View {
     var body: some View {
         ZStack(alignment:  Alignment(horizontal: .center, vertical: .center)){
             Image("\(vm.currentRoom.roompic)")
+            Doors()
             CharaTextView(vm: vm)
            
             if vm.showInventory {

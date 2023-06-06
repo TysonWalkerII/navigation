@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     @Published var player:Person
     @Published var trash: Trash
     @Published var progress: Double = 0.0
-    @Published var showInventory: Bool = false
+    @Published var showInventory: Bool = true
     var choices:[Choice] {
         if let choices = currentRoom.choices {
             return choices
