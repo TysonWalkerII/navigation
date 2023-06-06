@@ -33,9 +33,14 @@ struct RoomNavigation: View {
     var body: some View {
         ZStack(alignment:  Alignment(horizontal: .center, vertical: .center)){
             Image("\(vm.currentRoom.roompic)")
+            Button{
+                vm.changeLookOfRoom()
+            }label: {
+                Image(systemName: "door.right.hand.open").scaleEffect(5)
+            }
 //            Text((vm.currentRoom.key?.itemName)!)
 //            CharaTextView(vm: vm)
-           
+            
             if showInventory {
                 InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
             }

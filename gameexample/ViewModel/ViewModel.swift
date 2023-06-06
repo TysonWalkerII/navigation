@@ -9,11 +9,13 @@ import Foundation
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published var currentRoom: Room
+    @Published var currentRoom: Room 
     @Published var player:Person
     @Published var trash: Trash
     @Published var progress: Double = 0.0
     @Published var showInventory: Bool = false
+    @Published var roomCounter = 0
+
     var choices:[Choice] {
         if let choices = currentRoom.choices {
             return choices
@@ -43,9 +45,21 @@ class ViewModel: ObservableObject {
         progress += randomNumbersInAnArray[Int.random(in: 1..<randomNumbersInAnArray.count)]
         print("\(progress)")
     }
+    func theStairs() {
+        currentRoom.stairs()
+    }
     
     func changeLookOfRoom() {
-        currentRoom.move()
+        if roomCounter == 5 {
+            self.theStairs()
+            roomCounter = 0
+            return
+        }
+        var nextRoom = currentRoom
+        while currentRoom == nextRoom {
+            currentRoom.move()
+        }
+        roomCounter += 1
     }
     
     
