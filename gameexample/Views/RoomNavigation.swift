@@ -31,13 +31,18 @@ struct RoomNavigation: View {
     }
     
     var body: some View {
-        ZStack{
+        ZStack(alignment:  Alignment(horizontal: .center, vertical: .center)){
             Image("\(vm.currentRoom.roompic)")
+            Doors()
             CharaTextView(vm: vm)
            
-           // if showInventory {
-                InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
-           // }
+            if vm.showInventory {
+          
+            InventoryView(columns: columns, tappedOnItem: $vm.selectedItem, vm: vm)
+            
+               
+            }
+
             
 //            if vm.choices.count != 0 && !roomDialog.isEmpty {
 //                RoomDialogView(vm: vm, dialogThing:vm.currentRoom.dialog ?? "")
